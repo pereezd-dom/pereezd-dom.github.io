@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Аренда квартир за границей с ценами в рублях — бот Переезд.Дом</title>
+<meta name="description" content="Сколько стоит снять квартиру в 23 странах: цены в рублях по 148 городам. Telegram-бот собирает объявления с 35 сайтов и присылает новые каждые полчаса.">
+<link rel="canonical" href="https://pereezd-dom.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Переезд.Дом">
+<meta property="og:title" content="Квартиры за границей в рублях — Переезд.Дом">
+<meta property="og:description" content="Объявления об аренде с 35 сайтов в 23 странах, цены по курсу ЦБ. Новые — в Telegram каждые полчаса.">
+<meta property="og:url" content="https://pereezd-dom.github.io/">
+<meta property="og:image" content="https://pereezd-dom.github.io/img/bot.jpg">
+<meta name="theme-color" content="#0f263d">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/Oswald-600-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/EBGaramond-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=2026-11-21">
+
+</head>
+<body>
+
+<header class="hero" id="top">
+  <nav class="top" aria-label="Главная навигация">
+    <a class="mark" href="/">Переезд.Дом</a>
+    <a class="side" href="https://t.me/PereezdDom">Канал</a>
+  </nav>
+  <h1 class="rise">Квартиры за границей в рублях</h1>
+  <p class="lead rise" style="--d:1">Telegram-бот собирает объявления с <strong>35 сайтов в 23 странах</strong>, переводит цены в рубли по курсу ЦБ и присылает новые каждые полчаса.</p>
+  <div class="folders" role="navigation" aria-label="Разделы">
+    <a class="folder" href="#tseny" style="--c:var(--sky);--x:4%"><span class="tab">Цены</span><span class="body"></span></a>
+    <a class="folder" href="#kak" style="--c:var(--mint);--x:24%"><span class="tab">Как работает</span><span class="body"></span></a>
+    <a class="folder" href="#strany" style="--c:var(--paper);--x:46%"><span class="tab">23 страны</span><span class="body"></span></a>
+    <a class="folder" href="#podpiska" style="--c:var(--star);--x:66%"><span class="tab">Подписка</span><span class="body"></span></a>
+    <div class="folder folder--front" style="--x:8%">
+      <span class="tab">Начать</span>
+      <div class="body">
+        <div>
+          <a class="btn btn--light" href="https://t.me/PereezdDomBot?start=src_site_main">Открыть бота в Telegram</a>
+          <p class="say">Выберите город и бюджет — первые 3 дня новые квартиры приходят бесплатно. Так выглядит каждая:</p>
+        </div>
+        <div class="card" data-ui>
+  <div class="who">Переезд.Дом</div>
+  <div class="t"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>2-комн. · 51 м² · Сабуртало, Тбилиси</div>
+  <div class="p">≈ 82 191 ₽/мес <span>(1 000 $)</span></div>
+  <div class="s"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>найдено 20 ноября</div>
+  <a class="open" href="https://korter.ge/ru/%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D0%B0-%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80-%D1%82%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8/lisi-house/1037992" rel="nofollow noopener" target="_blank">Открыть на korter.ge</a>
+</div>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="prices" id="tseny" aria-labelledby="tseny-h">
+  <h2 id="tseny-h" class="sec-head rise">Сколько стоит двушка</h2>
+  <p class="sec-note rise" style="--d:1">Медиана — середина всех цен на двушки в городе: половина дешевле, половина дороже. Посчитано по объявлениям бота на 21 ноября 2026.</p>
+  <div class="grid">
+    <div class="rise" style="--d:2">
+      
+      <img class="photo city-photo" data-city="0" src="/img/tbilisi.jpg" width="960" height="960" alt="Тбилиси">
+      
+      <img class="photo city-photo" data-city="1" src="/img/erevan.jpg" width="960" height="960" alt="Ереван" hidden loading="lazy">
+      
+      <img class="photo city-photo" data-city="2" src="/img/belgrad.jpg" width="960" height="960" alt="Белград" hidden loading="lazy">
+      
+      <img class="photo city-photo" data-city="3" src="/img/limassol.jpg" width="960" height="960" alt="Лимасол" hidden loading="lazy">
+      
+    </div>
+    <div class="panel rise" style="--d:3">
+      <div class="tabs" role="tablist" aria-label="Город">
+        <button type="button" role="tab" id="tab-0" aria-controls="panel-0" aria-selected="true">Тбилиси</button><button type="button" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="false">Ереван</button><button type="button" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false">Белград</button><button type="button" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false">Лимасол</button>
+      </div>
+      
+      <div class="city-panel" role="tabpanel" id="panel-0" aria-labelledby="tab-0">
+        <p class="what">Двушка в месяц, Грузия</p>
+        <p class="big">65 753 ₽</p>
+        <p class="desc">Обычно — 49–95 тыс. ₽ по 558 объявлениям из 1635. Новых за сутки — 115. Сайты: korter.ge, place.ge.</p>
+      </div>
+      
+      <div class="city-panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" hidden>
+        <p class="what">Двушка в месяц, Армения</p>
+        <p class="big">102 588 ₽</p>
+        <p class="desc">Обычно — 83–115 тыс. ₽ по 52 объявлениям из 126. Новых за сутки — 6. Сайты: estate.am, realtors.am.</p>
+      </div>
+      
+      <div class="city-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
+        <p class="what">Двушка в месяц, Сербия</p>
+        <p class="big">67 758 ₽</p>
+        <p class="desc">Обычно — 54–99 тыс. ₽ по 252 объявлениям из 1010. Новых за сутки — 73. Сайты: 4zida.rs, oglasi.rs.</p>
+      </div>
+      
+      <div class="city-panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>
+        <p class="what">Двушка в месяц, Кипр</p>
+        <p class="big">135 517 ₽</p>
+        <p class="desc">Обычно — 108–172 тыс. ₽ по 11 объявлениям из 67. Сайты: index.cy.</p>
+      </div>
+      
+      <div class="cells">
+        
+        <a class="cell-bot" data-city="0" href="https://t.me/PereezdDomBot?start=src_site_tbilisi">Свежие в боте</a>
+        
+        <a class="cell-bot" data-city="1" href="https://t.me/PereezdDomBot?start=src_site_erevan" hidden>Свежие в боте</a>
+        
+        <a class="cell-bot" data-city="2" href="https://t.me/PereezdDomBot?start=src_site_belgrad" hidden>Свежие в боте</a>
+        
+        <a class="cell-bot" data-city="3" href="https://t.me/PereezdDomBot?start=src_site_limasol" hidden>Свежие в боте</a>
+        
+        
+        <a class="cell-page" data-city="0" href="/gruziya/tbilisi/">Все цены города</a>
+        
+        <a class="cell-page" data-city="1" href="/armeniya/erevan/" hidden>Все цены города</a>
+        
+        <a class="cell-page" data-city="2" href="/serbiya/belgrad/" hidden>Все цены города</a>
+        
+        <a class="cell-page" data-city="3" href="/kipr/limasol/" hidden>Все цены города</a>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="kak" aria-labelledby="kak-h">
+  <div>
+    <h2 id="kak-h" class="rise">Как работает бот</h2>
+    <p class="sec-note rise" style="--d:1">Вы один раз говорите, что ищете. Дальше бот сам следит за сайтами объявлений и пишет, когда появилось подходящее.</p>
+    <img class="photo rise" style="--d:2" src="/img/tbilisi-roofs.jpg" width="960" height="960" alt="Крыши старого Тбилиси" loading="lazy">
+  </div>
+  <div class="slip rise" style="--d:2">
+    <h3>Сегодня</h3>
+    <div class="row"><span>Выбираете страну и город</span><span class="lead-dots"></span><span class="v">1 минута</span></div>
+    <div class="row"><span>Ставите бюджет в рублях и комнаты</span><span class="lead-dots"></span><span class="v">ещё минута</span></div>
+    <h3>Каждые полчаса</h3>
+    <div class="row"><span>Бот обходит 35 сайтов</span><span class="lead-dots"></span><span class="v">30 мин</span></div>
+    <div class="row"><span>Переводит цены в рубли по курсу ЦБ</span><span class="lead-dots"></span><span class="v">сразу</span></div>
+    <div class="row"><span>Помечает подозрительно дешёвые</span><span class="lead-dots"></span><span class="v">сразу</span></div>
+    <h3>Когда нашлось</h3>
+    <div class="row"><span>Карточка приходит в Telegram</span><span class="lead-dots"></span><span class="v">до 30 мин</span></div>
+    <div class="row"><span>Пишете хозяину на сайте объявления</span><span class="lead-dots"></span><span class="v">без комиссии</span></div>
+    <div class="total"><span>Новая квартира у вас в чате</span><span>≈ 30 мин</span></div>
+  </div>
+</section>
+
+<section class="countries" id="strany" aria-labelledby="strany-h">
+  <img class="plate plate--left rise" src="/img/erevan.jpg" width="960" height="960" alt="Ереван и Арарат" loading="lazy">
+  <img class="plate plate--right rise" src="/img/belgrad.jpg" width="960" height="960" alt="Белград, Косанчичев венац" loading="lazy">
+  <div class="sheet rise">
+    <h2 id="strany-h">23 страны, 148 городов</h2>
+    <p class="intro">Цена — медиана двушки в самом доступном городе страны. Подвиньте бюджет: увидите, в скольких городах двушка в него укладывается.</p>
+    <div class="budget" hidden>
+      <div class="head"><label for="budget">Бюджет на двушку в месяц</label><output id="budget-out" for="budget">60 000 ₽</output></div>
+      <input id="budget" type="range" min="20000" max="200000" step="5000" value="60000">
+    </div>
+    
+    <div class="region">
+      <h3>Средняя Азия</h3>
+      
+      <a class="c-row" href="/kazakhstan/" data-code="KZ">
+        <span class="n">Казахстан</span>
+        <span class="pr">от 29 307 ₽</span>
+        <span class="sub">10 городов · дешевле всего Уральск <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/kirgiziya/" data-code="KG">
+        <span class="n">Киргизия</span>
+        <span class="pr">от 65 753 ₽</span>
+        <span class="sub">1 город · дешевле всего Бишкек <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/uzbekistan/" data-code="UZ">
+        <span class="n">Узбекистан</span>
+        <span class="pr">от 65 753 ₽</span>
+        <span class="sub">1 город · дешевле всего Ташкент <span class="fit"></span></span>
+      </a>
+      
+    </div>
+    
+    <div class="region">
+      <h3>Балканы</h3>
+      
+      <a class="c-row" href="/serbiya/" data-code="RS">
+        <span class="n">Сербия</span>
+        <span class="pr">от 27 103 ₽</span>
+        <span class="sub">9 городов · дешевле всего Зренянин <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/bolgariya/" data-code="BG">
+        <span class="n">Болгария</span>
+        <span class="pr">от 29 814 ₽</span>
+        <span class="sub">10 городов · дешевле всего Велико-Тырново <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/chernogoriya/" data-code="ME">
+        <span class="n">Черногория</span>
+        <span class="pr">от 54 207 ₽</span>
+        <span class="sub">3 города · дешевле всего Бар <span class="fit"></span></span>
+      </a>
+      
+    </div>
+    
+    <div class="region">
+      <h3>Кавказ</h3>
+      
+      <a class="c-row" href="/gruziya/" data-code="GE">
+        <span class="n">Грузия</span>
+        <span class="pr">от 28 767 ₽</span>
+        <span class="sub">5 городов · дешевле всего Кобулети <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/armeniya/" data-code="AM">
+        <span class="n">Армения</span>
+        <span class="pr">от 102 588 ₽</span>
+        <span class="sub">1 город · дешевле всего Ереван <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/azerbaydzhan/" data-code="AZ">
+        <span class="n">Азербайджан</span>
+        <span class="pr">от 16 922 ₽</span>
+        <span class="sub">7 городов · дешевле всего Гянджа <span class="fit"></span></span>
+      </a>
+      
+    </div>
+    
+    <div class="region">
+      <h3>Восточная Европа</h3>
+      
+      <a class="c-row" href="/belarus/" data-code="BY">
+        <span class="n">Беларусь</span>
+        <span class="pr">от 16 455 ₽</span>
+        <span class="sub">10 городов · дешевле всего Пинск <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/chekhiya/" data-code="CZ">
+        <span class="n">Чехия</span>
+        <span class="pr">от 49 938 ₽</span>
+        <span class="sub">10 городов · дешевле всего Острава <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/moldova/" data-code="MD">
+        <span class="n">Молдова</span>
+        <span class="pr">от 40 655 ₽</span>
+        <span class="sub">1 город · дешевле всего Кишинёв <span class="fit"></span></span>
+      </a>
+      
+    </div>
+    
+    <div class="region">
+      <h3>Западная Европа</h3>
+      
+      <a class="c-row" href="/portugaliya/" data-code="PT">
+        <span class="n">Португалия</span>
+        <span class="pr">от 71 372 ₽</span>
+        <span class="sub">10 городов · дешевле всего Коимбра <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/ispaniya/" data-code="ES">
+        <span class="n">Испания</span>
+        <span class="pr">от 62 789 ₽</span>
+        <span class="sub">10 городов · дешевле всего Торревьеха <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/kipr/" data-code="CY">
+        <span class="n">Кипр</span>
+        <span class="pr">от 67 758 ₽</span>
+        <span class="sub">4 города · дешевле всего Никосия <span class="fit"></span></span>
+      </a>
+      
+    </div>
+    
+    <div class="region">
+      <h3>Ближний Восток и Африка</h3>
+      
+      <a class="c-row" href="/turtsiya/" data-code="TR">
+        <span class="n">Турция</span>
+        <span class="pr">от 26 895 ₽</span>
+        <span class="sub">10 городов · дешевле всего Бурса <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/oae/" data-code="AE">
+        <span class="n">ОАЭ</span>
+        <span class="pr">от 44 066 ₽</span>
+        <span class="sub">7 городов · дешевле всего Фуджейра <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/egipet/" data-code="EG">
+        <span class="n">Египет</span>
+        <span class="pr">от 40 658 ₽</span>
+        <span class="sub">5 городов · дешевле всего Хургада <span class="fit"></span></span>
+      </a>
+      
+    </div>
+    
+    <div class="region">
+      <h3>Балтия</h3>
+      
+      <a class="c-row" href="/latviya/" data-code="LV">
+        <span class="n">Латвия</span>
+        <span class="pr">от 22 134 ₽</span>
+        <span class="sub">10 городов · дешевле всего Резекне <span class="fit"></span></span>
+      </a>
+      
+    </div>
+    
+    <div class="region">
+      <h3>Юго-Восточная Азия</h3>
+      
+      <a class="c-row" href="/tailand/" data-code="TH">
+        <span class="n">Таиланд</span>
+        <span class="pr">от 29 049 ₽</span>
+        <span class="sub">8 городов · дешевле всего Районг <span class="fit"></span></span>
+      </a>
+      
+    </div>
+    
+    <div class="region">
+      <h3>Латинская Америка</h3>
+      
+      <a class="c-row" href="/argentina/" data-code="AR">
+        <span class="n">Аргентина</span>
+        <span class="pr">от 26 600 ₽</span>
+        <span class="sub">6 городов · дешевле всего Росарио <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/paragvay/" data-code="PY">
+        <span class="n">Парагвай</span>
+        <span class="pr">от 28 849 ₽</span>
+        <span class="sub">7 городов · дешевле всего Фернандо-де-ла-Мора <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/urugvay/" data-code="UY">
+        <span class="n">Уругвай</span>
+        <span class="pr">от 42 369 ₽</span>
+        <span class="sub">3 города · дешевле всего Колония-дель-Сакраменто <span class="fit"></span></span>
+      </a>
+      
+    </div>
+    
+    <p class="date">Данные на 21 ноября 2026 · 110254 объявлений</p>
+  </div>
+  <script type="application/json" id="budget-data">{"KZ":[64109,54950,36634,36634,32512,45792,36634,36634,29307,38923],"RS":[67758,45172,31621,31621,31621,36138,27103,27103,28006],"GE":[65753,53424,38032,34863,28767],"AM":[102588],"BY":[50614,24682,27425,27425,24657,21940,17826,20548,20568,16455],"BG":[56917,40655,47883,45082,40655,31621,43275,33427,29814,31621],"PT":[131000,90345,131000,103896,99379,76793,71372,108413,99379,135517],"TR":[58680,48900,53382,33415,32600,43195,52975,57050,47270,26895],"AE":[139876,145471,72691,61545,91378,44066,48498],"ES":[131000,139492,117448,90345,62789,90345,90345,121965,123772,90345],"LV":[40655,42010,37493,22586,31621,28910,22586,27103,22134,31621],"AZ":[33843,21756,21708,19339,16922,16922,16922],"KG":[65753],"EG":[42003,40658,41240,64915],"TH":[60518,45994,45994,36311,45994,84726,72622,29049],"ME":[58724,54207,56465],"AR":[42360,33813,31212,26600,52029,39319],"CZ":[92109,73983,49938,57511,58833,52713,55487,60496,60111,55487],"MD":[40655],"PY":[65178,41753,28849,32794,32794,65753,29506],"UY":[56630,80876,42369],"UZ":[65753],"CY":[135517,67758,79051,90345]}</script>
+</section>
+
+<section class="pricing" id="podpiska" aria-labelledby="podpiska-h">
+  <div>
+    <h2 id="podpiska-h" class="rise">Сколько стоит бот</h2>
+    <img class="photo rise" style="--d:1" src="/img/tashkent.jpg" width="960" height="960" alt="Ташкент" loading="lazy">
+  </div>
+  <div class="price-cols">
+    <div class="price-group rise">
+      <h3>Сначала бесплатно</h3>
+      <div class="item"><div class="line"><span>Пробный период, 3 дня</span><span>0 звёзд</span></div><p class="d">Всё работает: поиски, уведомления о новых квартирах, гайды по переезду.</p></div>
+      <div class="item"><div class="line"><span>Поиск и гайды без подписки</span><span>0 звёзд</span></div><p class="d">Поиски сохраняются, новые квартиры можно смотреть в боте самому.</p></div>
+      <div class="item"><div class="line"><span>Друг оформил подписку</span><span>+7 дней</span></div><p class="d">Ссылка-приглашение — в боте, в разделе подписки.</p></div>
+    </div>
+    <div class="price-group rise" style="--d:1">
+      <h3>Подписка</h3>
+      
+      <div class="item"><div class="line"><span>7 дней</span><span>75 звёзд</span></div><p class="d">Разовая оплата — на время поиска. ≈ 120 ₽.</p></div>
+      
+      <div class="item"><div class="line"><span>14 дней</span><span>140 звёзд</span></div><p class="d">Разовая оплата — на время поиска. ≈ 220 ₽.</p></div>
+      
+      <div class="item"><div class="line"><span>1 месяц</span><span>250 звёзд</span></div><p class="d">Продлевается сама, отменить можно в любой момент. ≈ 400 ₽.</p></div>
+      
+      <div class="item"><div class="line"><span>12 месяцев</span><span>1800 звёзд</span></div><p class="d">Скидка 40%, разовая оплата. ≈ 2 880 ₽.</p></div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="voprosy" aria-labelledby="voprosy-h">
+  <h2 id="voprosy-h" class="rise">Частые вопросы</h2>
+  <div class="drawer">
+    <details open name="faq" data-tab="Откуда" style="--i:0">
+      <summary>Откуда бот берёт объявления?</summary>
+      <div class="a"><p>Сам обходит 35 сайтов недвижимости — крупнейшие в каждой стране: krisha.kz, 4zida.rs, ss.com, korter.ge и другие. Своих объявлений у нас нет.</p></div>
+    </details>
+    <details name="faq" data-tab="Курс" style="--i:1">
+      <summary>По какому курсу считаются рубли?</summary>
+      <div class="a"><p>По курсу ЦБ России на сегодня, он обновляется каждый день. Рядом с рублями бот показывает цену в валюте объявления.</p></div>
+    </details>
+    <details name="faq" data-tab="Мошенники" style="--i:2">
+      <summary>Что значит пометка «подозрительно»?</summary>
+      <div class="a"><p>Цена меньше половины медианы похожих квартир в городе. Так часто выглядят объявления мошенников: не переводите предоплату, пока не увидите квартиру и договор.</p></div>
+    </details>
+    <details name="faq" data-tab="Комиссия" style="--i:3">
+      <summary>Это агентство? Нужно платить комиссию?</summary>
+      <div class="a"><p>Нет. Бот только находит объявления и даёт ссылку на оригинал. Договариваетесь вы напрямую с хозяином или агентом с сайта объявления.</p></div>
+    </details>
+    <details name="faq" data-tab="Переезд" style="--i:4">
+      <summary>Есть ли что-то про визы и ВНЖ?</summary>
+      <div class="a"><p>Да: у каждой страны есть гайд — въезд, виды на жительство, документы, банки, связь и стоимость жизни, со ссылками на источники. Он есть на страницах стран на этом сайте и в боте.</p></div>
+    </details>
+  </div>
+</section>
+
+<section class="start" id="nachat" aria-labelledby="nachat-h">
+  <div>
+    <h2 id="nachat-h" class="rise">Начните с одного города</h2>
+    <p class="after rise" style="--d:1">Откроется бот в Telegram. Выберите город и бюджет — новые квартиры начнут приходить сразу, первые 3 дня бесплатно.</p>
+  </div>
+  <div class="chat rise" style="--d:2" data-ui>
+    <div class="head"><span class="ava"><img src="/favicon.png" width="36" height="36" alt=""></span><span><span class="name">Переезд.Дом</span><br><span class="status">бот</span></span></div>
+    <div class="msg">Привет! Я <b>Переезд.Дом</b> — собираю свежие объявления о квартирах за рубежом и перевожу цены в рубли по курсу ЦБ.</div>
+    <div class="msg">Скажите, что ищете, — и я буду присылать новые варианты, как только они появятся на сайтах.</div>
+    <div class="kb"><span>Новый поиск</span><span>Как переехать</span></div>
+    <a class="btn go" href="https://t.me/PereezdDomBot?start=src_site_main">Открыть @PereezdDomBot</a>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="notes">
+    <p><a href="/">Переезд.Дом</a> — бот в Telegram: аренда и покупка жилья за границей с ценами в рублях.</p>
+    <p>Цены на сайте — на 21 ноября 2026, обновляются каждый день. В боте — каждые полчаса.</p>
+    <p><a href="https://t.me/PereezdDom">Канал @PereezdDom</a> · <a href="#top">Наверх</a></p>
+  </div>
+  <a class="bot" href="https://t.me/PereezdDomBot?start=src_site_main">@PereezdDomBot</a>
+  <div class="meta">
+    <p><a href="/kazakhstan/">Казахстан</a> · <a href="/serbiya/">Сербия</a> · <a href="/gruziya/">Грузия</a> · <a href="/armeniya/">Армения</a> · <a href="/belarus/">Беларусь</a> · <a href="/bolgariya/">Болгария</a> · <a href="/portugaliya/">Португалия</a> · <a href="/turtsiya/">Турция</a> · <a href="/oae/">ОАЭ</a> · <a href="/ispaniya/">Испания</a> · <a href="/latviya/">Латвия</a> · <a href="/azerbaydzhan/">Азербайджан</a> · <a href="/kirgiziya/">Киргизия</a> · <a href="/egipet/">Египет</a> · <a href="/tailand/">Таиланд</a> · <a href="/chernogoriya/">Черногория</a> · <a href="/argentina/">Аргентина</a> · <a href="/chekhiya/">Чехия</a> · <a href="/moldova/">Молдова</a> · <a href="/paragvay/">Парагвай</a> · <a href="/urugvay/">Уругвай</a> · <a href="/uzbekistan/">Узбекистан</a> · <a href="/kipr/">Кипр</a></p>
+    <p>Фото: <a href="https://commons.wikimedia.org/w/index.php?curid=3238803" rel="noopener">«Balcony in Old Town»</a>, Vladimer Shioshvili, <a href="https://creativecommons.org/licenses/by-sa/2.0/" rel="noopener">CC BY-SA 2.0</a> (кадрировано); <a href="https://www.flickr.com/photos/77742560@N06/29163976733" rel="noopener">«Gliding over the roofs of Old Town (Dzveli Tbilisi)»</a>, shankar s., <a href="https://creativecommons.org/licenses/by/2.0/" rel="noopener">CC BY 2.0</a> (кадрировано); <a href="https://commons.wikimedia.org/w/index.php?curid=77270342" rel="noopener">«Kosancicev venac, pogled iz Karadjordjeve ulice»</a>, Milica Buha, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a> (кадрировано); <a href="https://commons.wikimedia.org/w/index.php?curid=114915269" rel="noopener">«Lemesos-seafront-promenade-a»</a>, Mboesch, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a> (кадрировано); <a href="https://commons.wikimedia.org/w/index.php?curid=83568171" rel="noopener">«Tashkent City Park 2019»</a>, Mysportedit, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a> (кадрировано); <a href="https://commons.wikimedia.org/w/index.php?curid=13266506" rel="noopener">«Yerevan Armenia with the backdrop of Mount Ararat»</a>, Սէրուժ Ուրիշեան (Serouj Ourishian), <a href="https://creativecommons.org/licenses/by/3.0/" rel="noopener">CC BY 3.0</a> (кадрировано).</p>
+    <p class="right">Цены — медианы объявлений, а не оценка рынка. 2026</p>
+  </div>
+</footer>
+
+<script src="/site.js?v=2026-11-21" defer></script>
+</body>
+</html>
