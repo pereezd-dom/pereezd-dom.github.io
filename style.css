@@ -53,7 +53,7 @@ a { color: inherit; }
 .bar, .hero-text, .page-hero, .globe { --focus: var(--focus-sky); }
 ::selection { background: #cfe1ff; color: var(--ink); }
 h1, h2, h3 { margin: 0; text-wrap: balance; }
-h1, h2 { font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.02; overflow-wrap: break-word; hyphens: auto; }
+h1, h2 { font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1.02; }
 h1 { font-size: var(--step-h1); }
 h2 { font-size: var(--step-h2); }
 h3 { font-size: var(--step-h3); font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; }
@@ -345,7 +345,8 @@ section { scroll-margin-top: 16px; }
 .page-hero { position: relative; isolation: isolate; color: var(--white); padding: clamp(32px, 5vw, 72px) var(--pad) clamp(28px, 4vw, 48px); }
 .page-hero .crumbs { color: var(--on-sky); font-weight: 600; }
 .page-hero .crumbs a { color: var(--white); }
-.page-hero h1 { margin-top: 14px; max-width: 20ch; font-size: clamp(1.75rem, 0.9rem + 2.8vw, 3.25rem); }
+/* длинное название города на узком телефоне переносится, но без «выравнивания» строк: оно режет слова */
+.page-hero h1 { text-wrap: pretty; overflow-wrap: break-word; margin-top: 14px; max-width: 20ch; font-size: clamp(1.75rem, 0.9rem + 2.8vw, 3.25rem); }
 .page-hero .lead { margin-top: 20px; max-width: 54ch; font-size: var(--step-lead); color: var(--on-sky); }
 .page-hero .lead strong { color: var(--white); font-weight: 700; }
 .page-hero .actions { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; }
