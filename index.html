@@ -13,168 +13,136 @@
 <meta property="og:description" content="Объявления об аренде с 35 сайтов в 23 странах, цены по курсу ЦБ. Новые — в Telegram каждые полчаса.">
 <meta property="og:url" content="https://pereezd-dom.github.io/">
 <meta property="og:image" content="https://pereezd-dom.github.io/img/bot.jpg">
-<meta name="theme-color" content="#0f263d">
+<meta name="theme-color" content="#1b5fd8">
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preload" href="/fonts/Oswald-600-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/EBGaramond-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Unbounded-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/img/sky.jpg" imagesrcset="/img/sky-960.jpg 960w, /img/sky.jpg 1920w" imagesizes="100vw">
 <link rel="stylesheet" href="/style.css?v=2026-11-21">
 
 </head>
 <body>
-
-<header class="hero" id="top">
-  <nav class="top" aria-label="Главная навигация">
-    <a class="mark" href="/">Переезд.Дом</a>
-    <a class="side" href="https://t.me/PereezdDom">Канал</a>
-  </nav>
-  <h1 class="rise">Квартиры за границей в рублях</h1>
-  <p class="lead rise" style="--d:1">Telegram-бот собирает объявления с <strong>35 сайтов в 23 странах</strong>, переводит цены в рубли по курсу ЦБ и присылает новые каждые полчаса.</p>
-  <div class="folders" role="navigation" aria-label="Разделы">
-    <a class="folder" href="#tseny" style="--c:var(--sky);--x:4%"><span class="tab">Цены</span><span class="body"></span></a>
-    <a class="folder" href="#kak" style="--c:var(--mint);--x:24%"><span class="tab">Как работает</span><span class="body"></span></a>
-    <a class="folder" href="#strany" style="--c:var(--paper);--x:46%"><span class="tab">23 страны</span><span class="body"></span></a>
-    <a class="folder" href="#podpiska" style="--c:var(--star);--x:66%"><span class="tab">Подписка</span><span class="body"></span></a>
-    <div class="folder folder--front" style="--x:8%">
-      <span class="tab">Начать</span>
-      <div class="body">
-        <div>
-          <a class="btn btn--light" href="https://t.me/PereezdDomBot?start=src_site_main">Открыть бота в Telegram</a>
-          <p class="say">Выберите город и бюджет — первые 3 дня новые квартиры приходят бесплатно. Так выглядит каждая:</p>
-        </div>
-        <div class="card" data-ui>
-  <div class="who">Переезд.Дом</div>
-  <div class="t"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>2-комн. · 51 м² · Сабуртало, Тбилиси</div>
-  <div class="p">≈ 82 191 ₽/мес <span>(1 000 $)</span></div>
-  <div class="s"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>найдено 20 ноября</div>
-  <a class="open" href="https://korter.ge/ru/%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D0%B0-%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80-%D1%82%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8/lisi-house/1037992" rel="nofollow noopener" target="_blank">Открыть на korter.ge</a>
-</div>
-
-      </div>
-    </div>
+<div class="page-sky" aria-hidden="true"><img src="/img/sky.jpg" srcset="/img/sky-960.jpg 960w, /img/sky.jpg 1920w" sizes="100vw" width="1920" height="1080" alt="" fetchpriority="high"></div>
+<nav class="bar" aria-label="Главная навигация">
+  <a class="brand" href="/"><img src="/favicon.png" width="36" height="36" alt="">Переезд.Дом</a>
+  <div class="links">
+    <a href="/#strany">Страны</a>
+    <a href="/#tseny">Цены</a>
+    <a href="/#kak">Как работает</a>
+    <a href="/#podpiska">Подписка</a>
   </div>
-</header>
+  <a class="btn btn--small" href="https://t.me/PereezdDomBot?start=src_site_main">Открыть бота</a>
+</nav>
+
+
+
+<svg class="icon-sprite" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+<symbol id="i-bell-ring" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" /><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" /><path d="M4 2C2.8 3.7 2 5.7 2 8" /><path d="M22 8c0-2.3-.8-4.3-2-6" /></symbol>
+<symbol id="i-book-open" viewBox="0 0 24 24"><path d="M12 7v14" /><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" /></symbol>
+<symbol id="i-calendar-check" viewBox="0 0 24 24"><path d="M8 2v4" /><path d="M16 2v4" /><rect width="18" height="18" x="3" y="4" rx="2" /><path d="M3 10h18" /><path d="m9 16 2 2 4-4" /></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /><path d="M2 12h20" /></symbol>
+<symbol id="i-house" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></symbol>
+<symbol id="i-luggage" viewBox="0 0 24 24"><path d="M6 20a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2" /><path d="M8 18V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v14" /><path d="M10 20h4" /><circle cx="16" cy="20" r="2" /><circle cx="8" cy="20" r="2" /></symbol>
+<symbol id="i-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" /></symbol>
+<symbol id="i-quote" viewBox="0 0 24 24"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" /></symbol>
+<symbol id="i-refresh-cw" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /><path d="M21 3v5h-5" /><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /><path d="M8 16H3v5" /></symbol>
+<symbol id="i-russian-ruble" viewBox="0 0 24 24"><path d="M6 11h8a4 4 0 0 0 0-8H9v18" /><path d="M6 15h8" /></symbol>
+<symbol id="i-shield-alert" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="M12 8v4" /><path d="M12 16h.01" /></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" /><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" /></symbol>
+</svg>
 
 <main>
-<section class="prices" id="tseny" aria-labelledby="tseny-h">
-  <h2 id="tseny-h" class="sec-head rise">Сколько стоит двушка</h2>
-  <p class="sec-note rise" style="--d:1">Медиана — середина всех цен на двушки в городе: половина дешевле, половина дороже. Посчитано по объявлениям бота на 21 ноября 2026.</p>
-  <div class="grid">
-    <div class="rise" style="--d:2">
-      
-      <img class="photo city-photo" data-city="0" src="/img/tbilisi.jpg" width="960" height="960" alt="Тбилиси">
-      
-      <img class="photo city-photo" data-city="1" src="/img/erevan.jpg" width="960" height="960" alt="Ереван" hidden loading="lazy">
-      
-      <img class="photo city-photo" data-city="2" src="/img/belgrad.jpg" width="960" height="960" alt="Белград" hidden loading="lazy">
-      
-      <img class="photo city-photo" data-city="3" src="/img/limassol.jpg" width="960" height="960" alt="Лимасол" hidden loading="lazy">
-      
+<div class="track">
+  <header class="hero-text" id="top">
+    <h1 class="rise">Квартиры за границей в рублях</h1>
+    <p class="lead rise" style="--d:1">Бот в Telegram собирает объявления с <strong>35 сайтов в 23 странах</strong>, переводит цены в рубли по курсу ЦБ и присылает новые каждые полчаса.</p>
+    <div class="actions rise" style="--d:2">
+      <a class="btn btn--white" href="https://t.me/PereezdDomBot?start=src_site_main">Открыть бота в Telegram</a>
+      <a class="more" href="#strany">Все 23 страны</a>
     </div>
-    <div class="panel rise" style="--d:3">
-      <div class="tabs" role="tablist" aria-label="Город">
-        <button type="button" role="tab" id="tab-0" aria-controls="panel-0" aria-selected="true">Тбилиси</button><button type="button" role="tab" id="tab-1" aria-controls="panel-1" aria-selected="false">Ереван</button><button type="button" role="tab" id="tab-2" aria-controls="panel-2" aria-selected="false">Белград</button><button type="button" role="tab" id="tab-3" aria-controls="panel-3" aria-selected="false">Лимасол</button>
-      </div>
-      
-      <div class="city-panel" role="tabpanel" id="panel-0" aria-labelledby="tab-0">
-        <p class="what">Двушка в месяц, Грузия</p>
-        <p class="big">65 753 ₽</p>
-        <p class="desc">Обычно — 49–95 тыс. ₽ по 558 объявлениям из 1635. Новых за сутки — 115. Сайты: korter.ge, place.ge.</p>
-      </div>
-      
-      <div class="city-panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1" hidden>
-        <p class="what">Двушка в месяц, Армения</p>
-        <p class="big">102 588 ₽</p>
-        <p class="desc">Обычно — 83–115 тыс. ₽ по 52 объявлениям из 126. Новых за сутки — 6. Сайты: estate.am, realtors.am.</p>
-      </div>
-      
-      <div class="city-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
-        <p class="what">Двушка в месяц, Сербия</p>
-        <p class="big">67 758 ₽</p>
-        <p class="desc">Обычно — 54–99 тыс. ₽ по 252 объявлениям из 1010. Новых за сутки — 73. Сайты: 4zida.rs, oglasi.rs.</p>
-      </div>
-      
-      <div class="city-panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>
-        <p class="what">Двушка в месяц, Кипр</p>
-        <p class="big">135 517 ₽</p>
-        <p class="desc">Обычно — 108–172 тыс. ₽ по 11 объявлениям из 67. Сайты: index.cy.</p>
-      </div>
-      
-      <div class="cells">
-        
-        <a class="cell-bot" data-city="0" href="https://t.me/PereezdDomBot?start=src_site_tbilisi">Свежие в боте</a>
-        
-        <a class="cell-bot" data-city="1" href="https://t.me/PereezdDomBot?start=src_site_erevan" hidden>Свежие в боте</a>
-        
-        <a class="cell-bot" data-city="2" href="https://t.me/PereezdDomBot?start=src_site_belgrad" hidden>Свежие в боте</a>
-        
-        <a class="cell-bot" data-city="3" href="https://t.me/PereezdDomBot?start=src_site_limasol" hidden>Свежие в боте</a>
-        
-        
-        <a class="cell-page" data-city="0" href="/gruziya/tbilisi/">Все цены города</a>
-        
-        <a class="cell-page" data-city="1" href="/armeniya/erevan/" hidden>Все цены города</a>
-        
-        <a class="cell-page" data-city="2" href="/serbiya/belgrad/" hidden>Все цены города</a>
-        
-        <a class="cell-page" data-city="3" href="/kipr/limasol/" hidden>Все цены города</a>
-        
-      </div>
+  </header>
+
+  <div class="globe" data-globe>
+    <div class="globe-stick">
+      <div class="globe-stage"></div>
     </div>
   </div>
-</section>
 
-<section class="how" id="kak" aria-labelledby="kak-h">
-  <div>
-    <h2 id="kak-h" class="rise">Как работает бот</h2>
-    <p class="sec-note rise" style="--d:1">Вы один раз говорите, что ищете. Дальше бот сам следит за сайтами объявлений и пишет, когда появилось подходящее.</p>
-    <img class="photo rise" style="--d:2" src="/img/tbilisi-roofs.jpg" width="960" height="960" alt="Крыши старого Тбилиси" loading="lazy">
-  </div>
-  <div class="slip rise" style="--d:2">
-    <h3>Сегодня</h3>
-    <div class="row"><span>Выбираете страну и город</span><span class="lead-dots"></span><span class="v">1 минута</span></div>
-    <div class="row"><span>Ставите бюджет в рублях и комнаты</span><span class="lead-dots"></span><span class="v">ещё минута</span></div>
-    <h3>Каждые полчаса</h3>
-    <div class="row"><span>Бот обходит 35 сайтов</span><span class="lead-dots"></span><span class="v">30 мин</span></div>
-    <div class="row"><span>Переводит цены в рубли по курсу ЦБ</span><span class="lead-dots"></span><span class="v">сразу</span></div>
-    <div class="row"><span>Помечает подозрительно дешёвые</span><span class="lead-dots"></span><span class="v">сразу</span></div>
-    <h3>Когда нашлось</h3>
-    <div class="row"><span>Карточка приходит в Telegram</span><span class="lead-dots"></span><span class="v">до 30 мин</span></div>
-    <div class="row"><span>Пишете хозяину на сайте объявления</span><span class="lead-dots"></span><span class="v">без комиссии</span></div>
-    <div class="total"><span>Новая квартира у вас в чате</span><span>≈ 30 мин</span></div>
-  </div>
-</section>
+  <form class="search panel rise" id="poisk" action="#strany" style="--d:3" aria-labelledby="poisk-h">
+    <h2 id="poisk-h">Сколько стоит квартира</h2>
+    <div class="fields">
+      <label class="field"><span>Страна</span>
+        <select id="s-country" name="country">
+          <option value="KZ">Казахстан</option><option value="RS">Сербия</option><option value="GE" selected>Грузия</option><option value="AM">Армения</option><option value="BY">Беларусь</option><option value="BG">Болгария</option><option value="PT">Португалия</option><option value="TR">Турция</option><option value="AE">ОАЭ</option><option value="ES">Испания</option><option value="LV">Латвия</option><option value="AZ">Азербайджан</option><option value="KG">Киргизия</option><option value="EG">Египет</option><option value="TH">Таиланд</option><option value="ME">Черногория</option><option value="AR">Аргентина</option><option value="CZ">Чехия</option><option value="MD">Молдова</option><option value="PY">Парагвай</option><option value="UY">Уругвай</option><option value="UZ">Узбекистан</option><option value="CY">Кипр</option>
+        </select>
+      </label>
+      <label class="field"><span>Город</span>
+        <select id="s-city" name="city">
+          <option value="0" selected>Тбилиси</option><option value="1">Батуми</option><option value="2">Кутаиси</option><option value="3">Рустави</option><option value="4">Кобулети</option>
+        </select>
+      </label>
+      <label class="field"><span>Комнаты</span>
+        <select id="s-rooms" name="rooms">
+          <option value="1">Студия или 1</option>
+          <option value="2" selected>2 комнаты</option>
+          <option value="3">3 комнаты</option>
+          <option value="4">4 и больше</option>
+        </select>
+      </label>
+      <button class="btn" type="submit">Показать цены</button>
+    </div>
+    
+    <div class="result" id="s-result" aria-live="polite">
+      
+      <p class="r-head"><span class="r-price">65 753 ₽</span> <span class="r-unit">в месяц</span></p>
+      <p class="r-note"><b>Тбилиси, 2 комнаты</b> — медиана по 569 объявлениям, обычно 49–95 тыс. ₽. Новых за сутки: 95.</p>
+      <p class="r-links"><a href="/gruziya/tbilisi/">Все цены города</a><a href="https://t.me/PereezdDomBot?start=src_site_tbilisi">Свежие квартиры в боте</a></p>
+      
+    </div>
+    
+    <script type="application/json" id="search-data">[{"code":"KZ","cities":[{"name":"Алматы","url":"/kazakhstan/almaty/","bot":"https://t.me/PereezdDomBot?start=src_site_almaty","count":1555,"new":64,"rent":{"1":[42129,32970,54950,455],"2":[64109,49226,86547,642],"3":[91584,64109,128218,344],"4":[174009,128218,274752,114]}},{"name":"Астана","url":"/kazakhstan/astana/","bot":"https://t.me/PereezdDomBot?start=src_site_astana","count":1207,"new":56,"rent":{"1":[40297,32970,45792,356],"2":[54950,45792,64109,551],"3":[70520,60445,100742,221],"4":[146534,91584,183168,79]}},{"name":"Шымкент","url":"/kazakhstan/shymkent/","bot":"https://t.me/PereezdDomBot?start=src_site_shymkent","count":646,"new":39,"rent":{"1":[27475,21980,36634,165],"2":[36634,27475,45792,307],"3":[36634,31139,51287,151],"4":[45792,36634,73267,23]}},{"name":"Караганда","url":"/kazakhstan/karaganda/","bot":"https://t.me/PereezdDomBot?start=src_site_karaganda","count":291,"new":18,"rent":{"1":[27475,21522,36634,78],"2":[36634,27475,45792,156],"3":[45792,32970,54950,53],"4":[36633,27475,66398,4]}},{"name":"Актобе","url":"/kazakhstan/aktobe/","bot":"https://t.me/PereezdDomBot?start=src_site_aktobe","count":291,"new":11,"rent":{"1":[26101,21980,31139,112],"2":[32054,27475,36634,139],"3":[40297,31596,54950,33],"4":[64109,64109,82426,7]}},{"name":"Атырау","url":"/kazakhstan/atyrau/","bot":"https://t.me/PereezdDomBot?start=src_site_atyrau","count":283,"new":12,"rent":{"1":[32970,27017,45792,78],"2":[45792,35214,57011,140],"3":[45792,36634,64109,52],"4":[73267,63192,100742,13]}},{"name":"Павлодар","url":"/kazakhstan/pavlodar/","bot":"https://t.me/PereezdDomBot?start=src_site_pavlodar","count":149,"new":9,"rent":{"1":[27475,23812,31139,58],"2":[36634,29765,45792,56],"3":[56782,45792,66398,30],"4":[60445,47623,98911,5]}},{"name":"Усть-Каменогорск","url":"/kazakhstan/ust-kamenogorsk/","bot":"https://t.me/PereezdDomBot?start=src_site_ust-kamenogorsk","count":177,"new":12,"rent":{"1":[29307,24270,34344,68],"2":[36634,32970,44876,85],"3":[47623,37549,61819,20],"4":[123638,50371,203774,4]}},{"name":"Уральск","url":"/kazakhstan/uralsk/","bot":"https://t.me/PereezdDomBot?start=src_site_uralsk","count":195,"new":12,"rent":{"1":[24728,20148,29307,75],"2":[29307,23812,40297,86],"3":[36634,27475,64109,30],"4":[68688,43502,73267,4]}},{"name":"Костанай","url":"/kazakhstan/kostanay/","bot":"https://t.me/PereezdDomBot?start=src_site_kostanay","count":185,"new":7,"rent":{"1":[31139,27475,36634,88],"2":[38465,31139,47624,79],"3":[68688,37549,98452,16],"4":[61361,null,null,2]}}]},{"code":"RS","cities":[{"name":"Белград","url":"/serbiya/belgrad/","bot":"https://t.me/PereezdDomBot?start=src_site_belgrad","count":1045,"new":81,"rent":{"1":[45172,32298,63241,110],"2":[67758,54207,99379,258],"3":[108413,76793,162620,261],"4":[198758,130999,271034,233]}},{"name":"Нови-Сад","url":"/serbiya/novi-sad/","bot":"https://t.me/PereezdDomBot?start=src_site_novi-sad","count":564,"new":74,"rent":{"1":[27103,22586,31621,108],"2":[45172,36589,54207,132],"3":[65048,54207,85827,83],"4":[90345,72276,135517,56]}},{"name":"Ниш","url":"/serbiya/nish/","bot":"https://t.me/PereezdDomBot?start=src_site_nish","count":264,"new":20,"rent":{"1":[23490,21682,27103,41],"2":[31621,27103,36138,53],"3":[40655,36138,54207,31],"4":[53303,36138,63241,15]}},{"name":"Крагуевац","url":"/serbiya/kraguevats/","bot":"https://t.me/PereezdDomBot?start=src_site_kraguevats","count":43,"new":0,"rent":{"1":[22586,20327,29813,13],"2":[31621,29814,36138,11],"3":[36137,null,null,2],"4":[39751,null,null,2]}},{"name":"Суботица","url":"/serbiya/subotitsa/","bot":"https://t.me/PereezdDomBot?start=src_site_subotitsa","count":50,"new":3,"rent":{"1":[18069,16262,23376,18],"2":[31621,22586,37041,17],"3":[47430,41784,53077,4]}},{"name":"Панчево","url":"/serbiya/panchevo/","bot":"https://t.me/PereezdDomBot?start=src_site_panchevo","count":40,"new":2,"rent":{"1":[22586,18069,27103,11],"2":[36138,31621,44042,12],"3":[45172,40655,58724,5],"4":[67758,null,null,3]}},{"name":"Зренянин","url":"/serbiya/zrenyanin/","bot":"https://t.me/PereezdDomBot?start=src_site_zrenyanin","count":42,"new":2,"rent":{"1":[19876,18069,24618,12],"2":[27103,22586,31620,9],"3":[27103,21456,56465,6],"4":[58724,null,null,3]}},{"name":"Крушевац","url":"/serbiya/krushevats/","bot":"https://t.me/PereezdDomBot?start=src_site_krushevats","count":33,"new":3,"rent":{"1":[19424,18069,24166,4],"2":[27103,21231,33879,9],"3":[49689,30717,58724,7],"4":[63241,null,null,1]}},{"name":"Кралево","url":"/serbiya/kralevo/","bot":"https://t.me/PereezdDomBot?start=src_site_kralevo","count":28,"new":1,"rent":{"1":[23489,16713,30491,12],"2":[28006,22360,32750,6],"3":[38396,32750,54206,4],"4":[31621,null,null,1]}}]},{"code":"GE","cities":[{"name":"Тбилиси","url":"/gruziya/tbilisi/","bot":"https://t.me/PereezdDomBot?start=src_site_tbilisi","count":1672,"new":95,"rent":{"1":[41096,36986,49315,80],"2":[65753,49315,94520,569],"3":[90410,65753,139725,592],"4":[164382,110876,246573,431]}},{"name":"Батуми","url":"/gruziya/batumi/","bot":"https://t.me/PereezdDomBot?start=src_site_batumi","count":1390,"new":78,"rent":{"1":[32876,28767,45205,379],"2":[53424,39842,69862,424],"3":[69862,49315,98629,414],"4":[98629,65753,123287,173]}},{"name":"Кутаиси","url":"/gruziya/kutaisi/","bot":"https://t.me/PereezdDomBot?start=src_site_kutaisi","count":68,"new":1,"rent":{"1":[27061,22982,35715,4],"2":[38032,31694,41202,37],"3":[41096,31694,49315,19],"4":[48427,36447,60494,8]}},{"name":"Рустави","url":"/gruziya/rustavi/","bot":"https://t.me/PereezdDomBot?start=src_site_rustavi","count":29,"new":1,"rent":{"1":[22186,null,null,3],"2":[34863,31694,39522,13],"3":[41202,27098,47540,13]}},{"name":"Кобулети","url":"/gruziya/kobuleti/","bot":"https://t.me/PereezdDomBot?start=src_site_kobuleti","count":66,"new":3,"rent":{"1":[24657,19165,30411,13],"2":[28767,26506,36986,22],"3":[41096,32876,53424,24],"4":[49315,45205,65753,7]}}]},{"code":"AM","cities":[{"name":"Ереван","url":"/armeniya/erevan/","bot":"https://t.me/PereezdDomBot?start=src_site_erevan","count":126,"new":6,"rent":{"1":[82191,75231,90799,9],"2":[100608,80391,115068,52],"3":[134145,102625,159245,48],"4":[164382,127396,287669,17]}}]},{"code":"BY","cities":[{"name":"Минск","url":"/belarus/minsk/","bot":"https://t.me/PereezdDomBot?start=src_site_minsk","count":1804,"new":118,"rent":{"1":[38630,32909,45205,597],"2":[50230,41137,63128,698],"3":[65805,55890,85337,322],"4":[53424,41137,90410,187]}},{"name":"Гомель","url":"/belarus/gomel/","bot":"https://t.me/PereezdDomBot?start=src_site_gomel","count":353,"new":11,"rent":{"1":[20568,17414,26875,132],"2":[24682,20568,28796,147],"3":[30167,22625,37004,57],"4":[32909,23298,43856,17]}},{"name":"Брест","url":"/belarus/brest/","bot":"https://t.me/PereezdDomBot?start=src_site_brest","count":350,"new":22,"rent":{"1":[23311,19718,27425,148],"2":[27425,23311,32909,142],"3":[32876,25710,44209,42],"4":[32892,27945,37365,18]}},{"name":"Гродно","url":"/belarus/grodno/","bot":"https://t.me/PereezdDomBot?start=src_site_grodno","count":363,"new":14,"rent":{"1":[21940,19197,27404,110],"2":[27123,21391,32909,174],"3":[30167,24675,35652,70],"4":[32909,23996,43171,9]}},{"name":"Витебск","url":"/belarus/vitebsk/","bot":"https://t.me/PereezdDomBot?start=src_site_vitebsk","count":338,"new":13,"rent":{"1":[20568,17826,24682,152],"2":[24657,20568,30167,137],"3":[27397,21940,35309,40],"4":[35652,23996,39745,9]}},{"name":"Могилёв","url":"/belarus/mogilev/","bot":"https://t.me/PereezdDomBot?start=src_site_mogilev","count":243,"new":12,"rent":{"1":[19197,16455,22964,109],"2":[21940,17826,27184,94],"3":[26053,18031,32909,26],"4":[20568,18854,23955,14]}},{"name":"Бобруйск","url":"/belarus/bobruysk/","bot":"https://t.me/PereezdDomBot?start=src_site_bobruysk","count":69,"new":3,"rent":{"1":[12329,10970,13842,17],"2":[17140,15010,20568,34],"3":[20568,16438,23014,15],"4":[24657,null,null,3]}},{"name":"Барановичи","url":"/belarus/baranovichi/","bot":"https://t.me/PereezdDomBot?start=src_site_baranovichi","count":99,"new":7,"rent":{"1":[16455,13506,17826,36],"2":[20548,16438,24682,49],"3":[22192,19197,27425,11],"4":[22192,null,null,3]}},{"name":"Борисов","url":"/belarus/borisov/","bot":"https://t.me/PereezdDomBot?start=src_site_borisov","count":80,"new":5,"rent":{"1":[19197,15083,23835,37],"2":[21791,17826,25710,32],"3":[23984,21940,27425,8],"4":[28767,null,null,3]}},{"name":"Пинск","url":"/belarus/pinsk/","bot":"https://t.me/PereezdDomBot?start=src_site_pinsk","count":73,"new":3,"rent":{"1":[15083,12341,17826,29],"2":[16455,15083,20548,35],"3":[16438,14397,17826,9]}}]},{"code":"BG","cities":[{"name":"София","url":"/bolgariya/sofiya/","bot":"https://t.me/PereezdDomBot?start=src_site_sofiya","count":779,"new":27,"rent":{"1":[39300,35843,45172,126],"2":[56917,47883,67668,321],"3":[76793,63241,99379,274],"4":[135517,94862,180689,51]}},{"name":"Пловдив","url":"/bolgariya/plovdiv/","bot":"https://t.me/PereezdDomBot?start=src_site_plovdiv","count":468,"new":11,"rent":{"1":[26606,22496,31372,104],"2":[40610,31621,49689,196],"3":[52174,43365,63173,162],"4":[79503,60982,134161,5]}},{"name":"Варна","url":"/bolgariya/varna/","bot":"https://t.me/PereezdDomBot?start=src_site_varna","count":428,"new":18,"rent":{"1":[31621,25296,35686,85],"2":[47883,37945,58724,184],"3":[63241,49689,72727,138],"4":[72276,58724,89441,19]}},{"name":"Бургас","url":"/bolgariya/burgas/","bot":"https://t.me/PereezdDomBot?start=src_site_burgas","count":247,"new":6,"rent":{"1":[28910,25296,31621,59],"2":[45082,36138,54207,103],"3":[61434,46192,81310,79],"4":[59627,42010,70920,5]}},{"name":"Несебыр","url":"/bolgariya/nesebyr/","bot":"https://t.me/PereezdDomBot?start=src_site_nesebyr","count":82,"new":0,"rent":{"1":[22586,16081,27103,26],"2":[40655,26154,47430,41],"3":[54207,45172,63241,15]}},{"name":"Солнечный Берег","url":"/bolgariya/solnechnyy-bereg/","bot":"https://t.me/PereezdDomBot?start=src_site_solnechnyy-bereg","count":91,"new":0,"rent":{"1":[27013,19583,31621,33],"2":[31621,27103,44246,44],"3":[45172,30401,58724,13]}},{"name":"Святой Влас","url":"/bolgariya/svyatoy-vlas/","bot":"https://t.me/PereezdDomBot?start=src_site_svyatoy-vlas","count":48,"new":0,"rent":{"1":[33879,22812,40655,12],"2":[43275,31621,54207,30],"3":[47430,37244,90345,6]}},{"name":"Русе","url":"/bolgariya/ruse/","bot":"https://t.me/PereezdDomBot?start=src_site_ruse","count":183,"new":0,"rent":{"1":[27103,20870,31621,51],"2":[33427,29814,37945,67],"3":[44076,36138,57594,64]}},{"name":"Велико-Тырново","url":"/bolgariya/veliko-tyrnovo/","bot":"https://t.me/PereezdDomBot?start=src_site_veliko-tyrnovo","count":183,"new":0,"rent":{"1":[22586,17730,26425,46],"2":[29814,25296,34331,66],"3":[40655,35234,45172,63],"4":[39751,35008,59673,6]}},{"name":"Стара-Загора","url":"/bolgariya/stara-zagora/","bot":"https://t.me/PereezdDomBot?start=src_site_stara-zagora","count":142,"new":2,"rent":{"1":[25296,22586,32524,25],"2":[31621,27103,36138,65],"3":[40655,32524,47883,51],"4":[37945,null,null,1]}}]},{"code":"PT","cities":[{"name":"Лиссабон","url":"/portugaliya/lissabon/","bot":"https://t.me/PereezdDomBot?start=src_site_lissabon","count":514,"new":47,"rent":{"1":[108413,81310,126482,82],"2":[131000,103896,167137,172],"3":[158103,124223,205533,157],"4":[198758,162620,305364,103]}},{"name":"Порту","url":"/portugaliya/portu/","bot":"https://t.me/PereezdDomBot?start=src_site_portu","count":290,"new":19,"rent":{"1":[77515,72163,100734,82],"2":[90345,81310,109542,106],"3":[119706,108413,144551,66],"4":[158103,126482,207566,36]}},{"name":"Кашкайш","url":"/portugaliya/kashkaysh/","bot":"https://t.me/PereezdDomBot?start=src_site_kashkaysh","count":172,"new":13,"rent":{"1":[115189,94861,132129,18],"2":[131000,98249,182947,38],"3":[179334,144551,241671,66],"4":[198758,152456,295652,50]}},{"name":"Синтра","url":"/portugaliya/sintra/","bot":"https://t.me/PereezdDomBot?start=src_site_sintra","count":121,"new":4,"rent":{"1":[76793,66854,90345,13],"2":[103896,81310,112931,43],"3":[110672,99379,131000,50],"4":[144551,135517,289102,15]}},{"name":"Сетубал","url":"/portugaliya/setubal/","bot":"https://t.me/PereezdDomBot?start=src_site_setubal","count":89,"new":8,"rent":{"1":[81310,68887,87182,12],"2":[99379,81310,116318,28],"3":[103896,90345,118577,34],"4":[117448,108413,149068,15]}},{"name":"Брага","url":"/portugaliya/braga/","bot":"https://t.me/PereezdDomBot?start=src_site_braga","count":121,"new":9,"rent":{"1":[72276,60530,81310,17],"2":[76793,70920,103896,28],"3":[90345,76793,108413,43],"4":[93958,85827,133258,32]}},{"name":"Коимбра","url":"/portugaliya/koimbra/","bot":"https://t.me/PereezdDomBot?start=src_site_koimbra","count":119,"new":5,"rent":{"1":[57594,46527,68322,30],"2":[71372,60531,81310,33],"3":[81310,72276,90345,32],"4":[103896,83569,117448,23]}},{"name":"Фару","url":"/portugaliya/faru/","bot":"https://t.me/PereezdDomBot?start=src_site_faru","count":68,"new":0,"rent":{"1":[90345,72276,103896,7],"2":[108413,90345,151327,24],"3":[135517,121965,151327,20],"4":[163072,135517,212309,17]}},{"name":"Албуфейра","url":"/portugaliya/albufeyra/","bot":"https://t.me/PereezdDomBot?start=src_site_albufeyra","count":74,"new":1,"rent":{"1":[108413,76793,112931,15],"2":[99379,85827,121965,27],"3":[121965,112027,144551,23],"4":[158103,137775,209147,9]}},{"name":"Фуншал (Мадейра)","url":"/portugaliya/funshal-madeyra/","bot":"https://t.me/PereezdDomBot?start=src_site_funshal-madeyra","count":77,"new":3,"rent":{"1":[117448,99379,144551,11],"2":[135517,108413,153586,31],"3":[164878,135517,212309,22],"4":[162620,155844,207792,13]}}]},{"code":"TR","cities":[{"name":"Стамбул","url":"/turtsiya/stambul/","bot":"https://t.me/PereezdDomBot?start=src_site_stambul","count":544,"new":63,"rent":{"2":[58680,48493,73350,103],"3":[68460,53790,89650,204],"4":[97800,74980,138550,216]}},{"name":"Анталья — Муратпаша","url":"/turtsiya/antalya-muratpasha/","bot":"https://t.me/PereezdDomBot?start=src_site_antalya-muratpasha","count":165,"new":7,"rent":{"2":[48900,42787,60310,40],"3":[56235,45640,74572,66],"4":[65200,57050,76610,57]}},{"name":"Анталья — Коньяалты","url":"/turtsiya/antalya-konyaalty/","bot":"https://t.me/PereezdDomBot?start=src_site_antalya-konyaalty","count":105,"new":9,"rent":{"2":[53382,46455,57050,24],"3":[68460,52160,86390,31],"4":[89650,73350,114100,50]}},{"name":"Аланья","url":"/turtsiya/alanya/","bot":"https://t.me/PereezdDomBot?start=src_site_alanya","count":126,"new":5,"rent":{"2":[34230,24450,44825,37],"3":[42380,35860,52160,63],"4":[57050,46455,70905,25]}},{"name":"Мерсин","url":"/turtsiya/mersin/","bot":"https://t.me/PereezdDomBot?start=src_site_mersin","count":258,"new":16,"rent":{"2":[32600,27506,39527,57],"3":[40750,32600,48900,87],"4":[45640,37490,57050,109]}},{"name":"Измир","url":"/turtsiya/izmir/","bot":"https://t.me/PereezdDomBot?start=src_site_izmir","count":399,"new":31,"rent":{"2":[43195,32600,57050,73],"3":[48900,39120,63570,158],"4":[57457,45640,76610,162]}},{"name":"Анкара","url":"/turtsiya/ankara/","bot":"https://t.me/PereezdDomBot?start=src_site_ankara","count":465,"new":24,"rent":{"2":[52975,42380,65200,67],"3":[48900,39120,63366,108],"4":[57050,44010,76610,285]}},{"name":"Бодрум","url":"/turtsiya/bodrum/","bot":"https://t.me/PereezdDomBot?start=src_site_bodrum","count":98,"new":6,"rent":{"2":[57050,48900,73350,23],"3":[74165,60717,89650,52],"4":[81500,73350,99837,22]}},{"name":"Фетхие","url":"/turtsiya/fetkhie/","bot":"https://t.me/PereezdDomBot?start=src_site_fetkhie","count":115,"new":5,"rent":{"2":[48900,40750,55420,21],"3":[52160,47677,60106,48],"4":[61940,48900,74165,45]}},{"name":"Бурса","url":"/turtsiya/bursa/","bot":"https://t.me/PereezdDomBot?start=src_site_bursa","count":328,"new":28,"rent":{"2":[26895,24450,32600,56],"3":[32600,27710,40750,138],"4":[52975,41565,68460,132]}}]},{"code":"AE","cities":[{"name":"Дубай","url":"/oae/dubay/","bot":"https://t.me/PereezdDomBot?start=src_site_dubay","count":105,"new":0,"rent":{"1":[149208,null,null,1],"2":[139876,129100,181832,48],"3":[279751,207944,373009,46],"4":[327779,256442,344558,10]}},{"name":"Абу-Даби","url":"/oae/abu-dabi/","bot":"https://t.me/PereezdDomBot?start=src_site_abu-dabi","count":124,"new":10,"rent":{"1":[61545,57808,81105,17],"2":[145471,111889,186493,29],"3":[214468,121233,272752,46],"4":[331964,283959,382319,31]}},{"name":"Шарджа","url":"/oae/shardzha/","bot":"https://t.me/PereezdDomBot?start=src_site_shardzha","count":128,"new":2,"rent":{"1":[65283,51474,74604,5],"2":[72691,63403,79449,57],"3":[93258,83925,119353,55],"4":[117496,83925,167851,11]}},{"name":"Аджман","url":"/oae/adzhman/","bot":"https://t.me/PereezdDomBot?start=src_site_adzhman","count":104,"new":4,"rent":{"1":[45689,35898,60051,12],"2":[60616,52683,66675,36],"3":[81128,78297,89520,48],"4":[105365,98371,133816,8]}},{"name":"Рас-эль-Хайма","url":"/oae/ras-el-khayma/","bot":"https://t.me/PereezdDomBot?start=src_site_ras-el-khayma","count":69,"new":0,"rent":{"1":[62474,41308,67140,4],"2":[91378,76473,102568,27],"3":[130543,105840,149191,34],"4":[209813,191159,1144647,4]}},{"name":"Фуджейра","url":"/oae/fudzheyra/","bot":"https://t.me/PereezdDomBot?start=src_site_fudzheyra","count":27,"new":0,"rent":{"1":[36837,34225,40558,4],"2":[44066,42052,48486,5],"3":[72735,55670,191159,14],"4":[100710,83455,267621,4]}},{"name":"Умм-эль-Кайвайн","url":"/oae/umm-el-kayvayn/","bot":"https://t.me/PereezdDomBot?start=src_site_umm-el-kayvayn","count":25,"new":0,"rent":{"1":[37308,null,null,1],"2":[48498,45689,54093,9],"3":[65283,65283,68533,12],"4":[83925,null,null,3]}}]},{"code":"ES","cities":[{"name":"Мадрид","url":"/ispaniya/madrid/","bot":"https://t.me/PereezdDomBot?start=src_site_madrid","count":722,"new":63,"rent":{"1":[89441,79051,123320,17],"2":[131000,108413,155844,165],"3":[167137,126482,236025,222],"4":[247318,172784,343083,224]}},{"name":"Барселона","url":"/ispaniya/barselona/","bot":"https://t.me/PereezdDomBot?start=src_site_barselona","count":197,"new":7,"rent":{"1":[140034,101366,178114,9],"2":[139492,108413,177843,45],"3":[167047,119706,204223,53],"4":[225861,156883,456239,57]}},{"name":"Валенсия","url":"/ispaniya/valensiya/","bot":"https://t.me/PereezdDomBot?start=src_site_valensiya","count":372,"new":28,"rent":{"1":[99379,76567,123501,9],"2":[117448,107283,136646,58],"3":[131000,108413,170525,108],"4":[150423,125579,207792,166]}},{"name":"Аликанте","url":"/ispaniya/alikante/","bot":"https://t.me/PereezdDomBot?start=src_site_alikante","count":137,"new":4,"rent":{"1":[76567,68887,84697,8],"2":[90345,80407,108413,19],"3":[115189,90345,144551,39],"4":[135517,103896,194195,69]}},{"name":"Торревьеха","url":"/ispaniya/torrevekha/","bot":"https://t.me/PereezdDomBot?start=src_site_torrevekha","count":67,"new":3,"rent":{"1":[53303,null,null,2],"2":[62789,54884,67758,18],"3":[76793,67758,94184,34],"4":[90345,83117,126482,13]}},{"name":"Бенидорм","url":"/ispaniya/benidorm/","bot":"https://t.me/PereezdDomBot?start=src_site_benidorm","count":69,"new":2,"rent":{"2":[92603,83342,108413,18],"3":[121965,97120,149068,30],"4":[162620,133258,221344,21]}},{"name":"Малага","url":"/ispaniya/malaga/","bot":"https://t.me/PereezdDomBot?start=src_site_malaga","count":153,"new":6,"rent":{"1":[84020,76793,93507,35],"2":[94862,75889,109542,26],"3":[126482,95991,164879,41],"4":[143196,126143,169396,44]}},{"name":"Марбелья","url":"/ispaniya/marbelya/","bot":"https://t.me/PereezdDomBot?start=src_site_marbelya","count":144,"new":5,"rent":{"1":[81310,null,null,1],"2":[121965,97120,167137,6],"3":[180689,158103,216827,59],"4":[295878,234896,528515,78]}},{"name":"Пальма-де-Майорка","url":"/ispaniya/palma-de-mayorka/","bot":"https://t.me/PereezdDomBot?start=src_site_palma-de-mayorka","count":133,"new":6,"rent":{"1":[108413,null,null,1],"2":[123772,99379,133483,22],"3":[155844,135517,189723,48],"4":[216827,180689,298430,60]}},{"name":"Санта-Крус-де-Тенерифе","url":"/ispaniya/santa-krus-de-tenerife/","bot":"https://t.me/PereezdDomBot?start=src_site_santa-krus-de-tenerife","count":73,"new":0,"rent":{"1":[112931,null,null,1],"2":[90345,79051,99379,12],"3":[106154,94862,117448,26],"4":[117448,106154,149068,33]}}]},{"code":"LV","cities":[{"name":"Рига","url":"/latviya/riga/","bot":"https://t.me/PereezdDomBot?start=src_site_riga","count":919,"new":44,"rent":{"1":[28910,22586,34670,308],"2":[40655,31621,58724,367],"3":[58724,44043,87543,181],"4":[94410,63241,144551,62]}},{"name":"Юрмала","url":"/latviya/yurmala/","bot":"https://t.me/PereezdDomBot?start=src_site_yurmala","count":158,"new":6,"rent":{"1":[25296,20779,35460,38],"2":[43365,33879,72276,51],"3":[83568,49237,118125,52],"4":[144551,101638,271079,17]}},{"name":"Рижский край","url":"/latviya/rizhskiy-kray/","bot":"https://t.me/PereezdDomBot?start=src_site_rizhskiy-kray","count":149,"new":6,"rent":{"1":[26651,21230,31621,36],"2":[37945,27103,48786,71],"3":[60982,41558,72050,32],"4":[90345,71824,130999,9]}},{"name":"Даугавпилс","url":"/latviya/daugavpils/","bot":"https://t.me/PereezdDomBot?start=src_site_daugavpils","count":45,"new":0,"rent":{"1":[18069,14003,20327,21],"2":[22586,18069,26651,20],"3":[22586,19198,29362,4]}},{"name":"Елгава","url":"/latviya/elgava/","bot":"https://t.me/PereezdDomBot?start=src_site_elgava","count":79,"new":5,"rent":{"1":[23490,20102,27103,33],"2":[31621,27103,40655,36],"3":[32976,31621,39977,8],"4":[74534,null,null,2]}},{"name":"Лиепая","url":"/latviya/liepaya/","bot":"https://t.me/PereezdDomBot?start=src_site_liepaya","count":111,"new":5,"rent":{"1":[22586,19876,25070,36],"2":[28910,23941,34782,57],"3":[48786,31621,63241,15],"4":[76793,null,null,3]}},{"name":"Вентспилс","url":"/latviya/ventspils/","bot":"https://t.me/PereezdDomBot?start=src_site_ventspils","count":72,"new":4,"rent":{"1":[14907,13326,18069,22],"2":[22586,18069,26651,36],"3":[32072,23037,43365,12],"4":[24845,null,null,2]}},{"name":"Валмиера","url":"/latviya/valmiera/","bot":"https://t.me/PereezdDomBot?start=src_site_valmiera","count":33,"new":4,"rent":{"1":[23490,19424,27103,15],"2":[27103,23715,33427,10],"3":[46979,34511,56465,5],"4":[51948,null,null,2]}},{"name":"Резекне","url":"/latviya/rezekne/","bot":"https://t.me/PereezdDomBot?start=src_site_rezekne","count":20,"new":2,"rent":{"1":[19876,14455,22586,9],"2":[22134,18069,27103,6],"3":[32524,null,null,3],"4":[17165,null,null,2]}},{"name":"Огре","url":"/latviya/ogre/","bot":"https://t.me/PereezdDomBot?start=src_site_ogre","count":53,"new":3,"rent":{"1":[24844,19424,30039,18],"2":[31621,27103,36138,27],"3":[49689,38848,54207,7],"4":[45172,null,null,1]}}]},{"code":"AZ","cities":[{"name":"Баку","url":"/azerbaydzhan/baku/","bot":"https://t.me/PereezdDomBot?start=src_site_baku","count":1408,"new":89,"rent":{"1":[21756,17405,28960,150],"2":[33843,24174,45930,601],"3":[48323,33843,67687,522],"4":[72522,43513,120869,135]}},{"name":"Сумгаит","url":"/azerbaydzhan/sumgait/","bot":"https://t.me/PereezdDomBot?start=src_site_sumgait","count":336,"new":16,"rent":{"1":[14987,13537,17163,38],"2":[21756,19339,26591,178],"3":[29009,21756,36261,107],"4":[33843,21756,55600,13]}},{"name":"Хырдалан","url":"/azerbaydzhan/khyrdalan/","bot":"https://t.me/PereezdDomBot?start=src_site_khyrdalan","count":325,"new":23,"rent":{"1":[16922,15834,19339,42],"2":[21708,19339,23207,192],"3":[24609,21756,26591,81],"4":[29976,28984,36260,9]}},{"name":"Абшерон","url":"/azerbaydzhan/absheron/","bot":"https://t.me/PereezdDomBot?start=src_site_absheron","count":51,"new":2,"rent":{"1":[18130,16680,20306,6],"2":[19339,17768,21756,38],"3":[21756,19339,24174,7]}},{"name":"Гянджа","url":"/azerbaydzhan/gyandzha/","bot":"https://t.me/PereezdDomBot?start=src_site_gyandzha","count":90,"new":1,"rent":{"1":[14504,14262,15833,14],"2":[16922,14504,19339,40],"3":[18130,16922,25986,28],"4":[29008,17526,58017,8]}},{"name":"Мингячевир","url":"/azerbaydzhan/mingyachevir/","bot":"https://t.me/PereezdDomBot?start=src_site_mingyachevir","count":33,"new":0,"rent":{"1":[12087,12087,16922,10],"2":[16922,14504,24174,15],"3":[19339,14504,23569,8]}},{"name":"Ленкорань","url":"/azerbaydzhan/lenkoran/","bot":"https://t.me/PereezdDomBot?start=src_site_lenkoran","count":10,"new":1,"rent":{"2":[16922,13295,21756,5],"3":[16922,15229,25382,5]}}]},{"code":"KG","cities":[{"name":"Бишкек","url":"/kirgiziya/bishkek/","bot":"https://t.me/PereezdDomBot?start=src_site_bishkek","count":390,"new":19,"rent":{"1":[55452,45205,61091,75],"2":[65771,58087,82191,162],"3":[89287,73972,115068,115],"4":[135615,98671,171984,26]}}]},{"code":"EG","cities":[{"name":"Каир","url":"/egipet/kair/","bot":"https://t.me/PereezdDomBot?start=src_site_kair","count":357,"new":8,"rent":{"1":[40094,30548,76369,22],"2":[42003,37421,49640,10],"3":[61095,38185,99282,127],"4":[68733,38185,99282,198]}},{"name":"Хургада","url":"/egipet/khurgada/","bot":"https://t.me/PereezdDomBot?start=src_site_khurgada","count":50,"new":0,"rent":{"1":[32839,20352,43229,6],"2":[40658,30548,53459,19],"3":[37116,26920,61478,16],"4":[76371,65678,132369,9]}},{"name":"Гиза","url":"/egipet/giza/","bot":"https://t.me/PereezdDomBot?start=src_site_giza","count":175,"new":4,"rent":{"1":[32075,20619,49640,12],"2":[41240,28638,68733,10],"3":[45058,30548,68733,54],"4":[53458,32076,73316,99]}},{"name":"Александрия","url":"/egipet/aleksandriya/","bot":"https://t.me/PereezdDomBot?start=src_site_aleksandriya","count":101,"new":2,"rent":{"3":[22911,15274,37803,40],"4":[38185,28257,49641,61]}},{"name":"Северное побережье","url":"/egipet/severnoe-poberezhe/","bot":"https://t.me/PereezdDomBot?start=src_site_severnoe-poberezhe","count":46,"new":0,"rent":{"1":[49641,48113,63005,6],"2":[64915,55750,68733,14],"3":[68733,59186,91645,18],"4":[76371,53459,91645,8]}}]},{"code":"TH","cities":[{"name":"Пхукет","url":"/tailand/pkhuket/","bot":"https://t.me/PereezdDomBot?start=src_site_pkhuket","count":158,"new":8,"rent":{"1":[48415,37521,72622,31],"2":[60518,43573,91988,88],"3":[145244,96829,181555,37],"4":[242073,null,null,2]}},{"name":"Паттайя","url":"/tailand/pattayya/","bot":"https://t.me/PereezdDomBot?start=src_site_pattayya","count":266,"new":41,"rent":{"1":[31469,21787,36311,27],"2":[48415,36311,62333,184],"3":[78674,60518,108933,49],"4":[127088,99249,154321,6]}},{"name":"Бангкок","url":"/tailand/bangkok/","bot":"https://t.me/PereezdDomBot?start=src_site_bangkok","count":263,"new":37,"rent":{"1":[33890,23602,65359,13],"2":[47204,34495,68990,145],"3":[101671,64149,157347,90],"4":[242073,205762,290488,15]}},{"name":"Чиангмай","url":"/tailand/chiangmay/","bot":"https://t.me/PereezdDomBot?start=src_site_chiangmay","count":185,"new":13,"rent":{"1":[24207,21787,33890,23],"2":[36311,28443,45994,134],"3":[60518,47204,70201,25],"4":[145244,null,null,3]}},{"name":"Хуахин","url":"/tailand/khuakhin/","bot":"https://t.me/PereezdDomBot?start=src_site_khuakhin","count":159,"new":10,"rent":{"1":[31469,24812,36311,37],"2":[45994,36311,60518,81],"3":[108933,75042,121037,37],"4":[302591,135561,538612,4]}},{"name":"Самуи","url":"/tailand/samui/","bot":"https://t.me/PereezdDomBot?start=src_site_samui","count":81,"new":0,"rent":{"1":[96829,55193,121037,19],"2":[84726,67780,121037,39],"3":[139192,111232,185186,18],"4":[169451,104091,242073,5]}},{"name":"Краби","url":"/tailand/krabi/","bot":"https://t.me/PereezdDomBot?start=src_site_krabi","count":15,"new":0,"rent":{"1":[84726,null,null,1],"2":[72622,49625,96829,9],"3":[133140,72622,199710,5]}},{"name":"Районг","url":"/tailand/rayong/","bot":"https://t.me/PereezdDomBot?start=src_site_rayong","count":130,"new":0,"rent":{"1":[19366,15735,31227,11],"2":[29049,20576,42967,88],"3":[60518,47204,84726,25],"4":[84726,56887,118616,6]}}]},{"code":"ME","cities":[{"name":"Будва","url":"/chernogoriya/budva/","bot":"https://t.me/PereezdDomBot?start=src_site_budva","count":18,"new":0,"rent":{"1":[32524,22586,36138,11],"2":[58724,42914,81310,5]}},{"name":"Бар","url":"/chernogoriya/bar/","bot":"https://t.me/PereezdDomBot?start=src_site_bar","count":80,"new":0,"rent":{"1":[45172,31621,49689,57],"2":[54207,42913,70017,17],"3":[67758,49689,72276,4],"4":[99379,null,null,1]}},{"name":"Подгорица","url":"/chernogoriya/podgoritsa/","bot":"https://t.me/PereezdDomBot?start=src_site_podgoritsa","count":134,"new":4,"rent":{"1":[39751,33427,45172,88],"2":[56465,45172,67758,40],"3":[60982,37267,101638,6]}}]},{"code":"AR","cities":[{"name":"Буэнос-Айрес","url":"/argentina/buenos-ayres/","bot":"https://t.me/PereezdDomBot?start=src_site_buenos-ayres","count":1805,"new":247,"rent":{"1":[65753,39015,99656,10],"2":[42359,34580,53378,1116],"3":[68534,53031,98629,337],"4":[142320,86482,221916,163]}},{"name":"Кордова","url":"/argentina/kordova/","bot":"https://t.me/PereezdDomBot?start=src_site_kordova","count":253,"new":27,"rent":{"2":[33165,28684,39021,144],"3":[48220,39719,71120,53],"4":[62424,41096,78030,45]}},{"name":"Мендоса","url":"/argentina/mendosa/","bot":"https://t.me/PereezdDomBot?start=src_site_mendosa","count":246,"new":23,"rent":{"2":[31212,23412,36453,98],"3":[37975,31212,52028,99],"4":[47858,39015,66586,43]}},{"name":"Росарио","url":"/argentina/rosario/","bot":"https://t.me/PereezdDomBot?start=src_site_rosario","count":376,"new":46,"rent":{"1":[20808,19377,23409,12],"2":[26600,23409,33213,183],"3":[40582,34470,57222,83],"4":[53830,44468,104989,36]}},{"name":"Барилоче","url":"/argentina/bariloche/","bot":"https://t.me/PereezdDomBot?start=src_site_bariloche","count":108,"new":6,"rent":{"1":[41616,36414,45517,10],"2":[52020,49419,62433,63],"3":[75429,65629,110958,21],"4":[143834,100736,205478,10]}},{"name":"Мар-дель-Плата","url":"/argentina/mar-del-plata/","bot":"https://t.me/PereezdDomBot?start=src_site_mar-del-plata","count":182,"new":11,"rent":{"1":[35373,null,null,2],"2":[39463,33578,53320,102],"3":[58334,46298,82191,39],"4":[72828,46818,104040,11]}}]},{"code":"CZ","cities":[{"name":"Прага","url":"/chekhiya/praga/","bot":"https://t.me/PereezdDomBot?start=src_site_praga","count":1599,"new":108,"rent":{"1":[68434,59186,77682,394],"2":[92109,79522,110604,614],"3":[122996,103206,147966,372],"4":[203453,151665,314427,159]}},{"name":"Брно","url":"/chekhiya/brno/","bot":"https://t.me/PereezdDomBot?start=src_site_brno","count":322,"new":26,"rent":{"1":[57337,51418,64513,129],"2":[73983,68711,87105,122],"3":[91739,81381,103557,57],"4":[129470,104501,171066,9]}},{"name":"Острава","url":"/chekhiya/ostrava/","bot":"https://t.me/PereezdDomBot?start=src_site_ostrava","count":193,"new":15,"rent":{"1":[38471,32182,42632,57],"2":[50678,44945,59648,82],"3":[65475,57337,77682,47],"4":[135943,84155,176634,6]}},{"name":"Пльзень","url":"/chekhiya/plzen/","bot":"https://t.me/PereezdDomBot?start=src_site_plzen","count":193,"new":14,"rent":{"1":[49383,42540,52250,66],"2":[57511,51788,66215,91],"3":[72133,60666,81936,29],"4":[88594,null,null,2]}},{"name":"Оломоуц","url":"/chekhiya/olomouts/","bot":"https://t.me/PereezdDomBot?start=src_site_olomouts","count":144,"new":15,"rent":{"1":[46054,41523,49475,36],"2":[58833,53175,63347,62],"3":[66585,59158,91554,32],"4":[77682,70284,118372,5]}},{"name":"Либерец","url":"/chekhiya/liberets/","bot":"https://t.me/PereezdDomBot?start=src_site_liberets","count":67,"new":1,"rent":{"1":[44390,38286,53637,17],"2":[52713,48089,65197,30],"3":[73983,68989,78607,13],"4":[106003,73983,125770,5]}},{"name":"Ческе-Будеёвице","url":"/chekhiya/cheske-budeevitse/","bot":"https://t.me/PereezdDomBot?start=src_site_cheske-budeevitse","count":83,"new":7,"rent":{"1":[42540,37916,47719,29],"2":[55487,51510,62885,36],"3":[62515,55487,70284,15],"4":[68434,null,null,3]}},{"name":"Градец-Кралове","url":"/chekhiya/gradets-kralove/","bot":"https://t.me/PereezdDomBot?start=src_site_gradets-kralove","count":95,"new":1,"rent":{"1":[46609,41800,54052,27],"2":[60496,55487,68434,44],"3":[77682,73798,103576,17],"4":[88779,null,null,3]}},{"name":"Пардубице","url":"/chekhiya/pardubitse/","bot":"https://t.me/PereezdDomBot?start=src_site_pardubitse","count":79,"new":2,"rent":{"1":[46239,40691,49938,23],"2":[59186,55487,66215,35],"3":[70099,62885,73983,16],"4":[83045,null,null,2]}},{"name":"Карловы Вары","url":"/chekhiya/karlovy-vary/","bot":"https://t.me/PereezdDomBot?start=src_site_karlovy-vary","count":68,"new":3,"rent":{"1":[40691,32829,49938,14],"2":[55487,47071,60843,26],"3":[68064,57337,85080,15],"4":[92478,null,null,2]}}]},{"code":"MD","cities":[{"name":"Кишинёв","url":"/moldova/kishinev/","bot":"https://t.me/PereezdDomBot?start=src_site_kishinev","count":114,"new":null,"rent":{"1":[27103,14320,40655,46],"2":[40655,22586,72276,34],"3":[45172,31621,71146,32],"4":[99379,null,null,2]}}]},{"code":"PY","cities":[{"name":"Асунсьон","url":"/paragvay/asunson/","bot":"https://t.me/PereezdDomBot?start=src_site_asunson","count":72,"new":45,"rent":{"1":[50876,null,null,3],"2":[66493,52376,91437,22],"3":[85232,65588,98629,37],"4":[108492,82396,133560,10]}},{"name":"Луке","url":"/paragvay/luke/","bot":"https://t.me/PereezdDomBot?start=src_site_luke","count":26,"new":null,"rent":{"1":[38054,null,null,3],"2":[41753,34109,45616,7],"3":[58684,48821,59013,13],"4":[47835,null,null,3]}},{"name":"Фернандо-де-ла-Мора","url":"/paragvay/fernando-de-la-mora/","bot":"https://t.me/PereezdDomBot?start=src_site_fernando-de-la-mora","count":12,"new":null,"rent":{"2":[28849,null,null,3],"3":[55396,44198,84862,6],"4":[78657,null,null,3]}},{"name":"Сан-Лоренсо","url":"/paragvay/san-lorenso/","bot":"https://t.me/PereezdDomBot?start=src_site_san-lorenso","count":13,"new":null,"rent":{"1":[33862,null,null,2],"2":[32794,28068,40931,5],"3":[57369,29342,64931,5],"4":[75616,null,null,1]}},{"name":"Ламбаре","url":"/paragvay/lambare/","bot":"https://t.me/PereezdDomBot?start=src_site_lambare","count":12,"new":null,"rent":{"1":[26219,null,null,1],"2":[32794,null,null,3],"3":[52438,50465,62958,5],"4":[123287,null,null,3]}},{"name":"Энкарнасьон","url":"/paragvay/enkarnason/","bot":"https://t.me/PereezdDomBot?start=src_site_enkarnason","count":15,"new":null,"rent":{"2":[65753,65753,472106,5],"3":[78821,41321,373743,8],"4":[945855,null,null,2]}},{"name":"Сьюдад-дель-Эсте","url":"/paragvay/syudad-del-este/","bot":"https://t.me/PereezdDomBot?start=src_site_syudad-del-este","count":18,"new":null,"rent":{"1":[44548,null,null,3],"2":[29506,22274,41609,4],"3":[82191,47239,112807,8],"4":[123287,null,null,3]}}]},{"code":"UY","cities":[{"name":"Монтевидео","url":"/urugvay/montevideo/","bot":"https://t.me/PereezdDomBot?start=src_site_montevideo","count":183,"new":115,"rent":{"1":[46027,40766,48575,24],"2":[55643,50301,62465,96],"3":[64767,52602,73643,52],"4":[107259,73890,156163,11]}},{"name":"Сьюдад-де-ла-Коста","url":"/urugvay/syudad-de-la-kosta/","bot":"https://t.me/PereezdDomBot?start=src_site_syudad-de-la-kosta","count":98,"new":23,"rent":{"1":[67396,36677,98423,4],"2":[78821,72904,86013,30],"3":[115068,98136,135615,51],"4":[180820,141697,215752,13]}},{"name":"Колония-дель-Сакраменто","url":"/urugvay/koloniya-del-sakramento/","bot":"https://t.me/PereezdDomBot?start=src_site_koloniya-del-sakramento","count":41,"new":21,"rent":{"1":[30657,28356,34191,19],"2":[42410,12329,57431,10],"3":[61725,41486,73684,10],"4":[59712,null,null,2]}}]},{"code":"UZ","cities":[{"name":"Ташкент","url":"/uzbekistan/tashkent/","bot":"https://t.me/PereezdDomBot?start=src_site_tashkent","count":59,"new":1,"rent":{"1":[53424,35958,65753,12],"2":[65753,57534,86300,26],"3":[98629,65753,184930,17],"4":[127396,100683,191094,4]}}]},{"code":"CY","cities":[{"name":"Лимасол","url":"/kipr/limasol/","bot":"https://t.me/PereezdDomBot?start=src_site_limasol","count":86,"new":19,"rent":{"2":[144551,123094,178430,16],"3":[189723,153586,225861,51],"4":[316206,216827,677584,19]}},{"name":"Никосия","url":"/kipr/nikosiya/","bot":"https://t.me/PereezdDomBot?start=src_site_nikosiya","count":74,"new":4,"rent":{"1":[63241,null,null,1],"2":[65499,56917,81084,10],"3":[81310,72276,90345,37],"4":[112931,89893,138904,26]}},{"name":"Ларнака","url":"/kipr/larnaka/","bot":"https://t.me/PereezdDomBot?start=src_site_larnaka","count":68,"new":2,"rent":{"2":[76793,65499,88763,13],"3":[117448,90345,126482,48],"4":[125579,84472,153585,5]}},{"name":"Пафос","url":"/kipr/pafos/","bot":"https://t.me/PereezdDomBot?start=src_site_pafos","count":31,"new":0,"rent":{"2":[90345,76793,117447,5],"3":[189723,144551,225861,21],"4":[135517,121965,383964,5]}}]}]</script>
+  </form>
 
-<section class="countries" id="strany" aria-labelledby="strany-h">
-  <img class="plate plate--left rise" src="/img/erevan.jpg" width="960" height="960" alt="Ереван и Арарат" loading="lazy">
-  <img class="plate plate--right rise" src="/img/belgrad.jpg" width="960" height="960" alt="Белград, Косанчичев венац" loading="lazy">
-  <div class="sheet rise">
-    <h2 id="strany-h">23 страны, 148 городов</h2>
-    <p class="intro">Цена — медиана двушки в самом доступном городе страны. Подвиньте бюджет: увидите, в скольких городах двушка в него укладывается.</p>
-    <div class="budget" hidden>
+  <div class="list-panel panel">
+  <section class="facts" aria-labelledby="facts-h">
+    <h2 id="facts-h" class="visually-hidden">Что делает бот</h2>
+    <div class="fact rise"><p class="f-big">35 сайтов</p><p>Крупнейшие сайты объявлений в каждой стране: krisha.kz, ss.com, 4zida.rs, korter.ge и другие.</p></div>
+    <div class="fact rise" style="--d:1"><p class="f-big">Каждые 30 минут</p><p>Бот обходит сайты и присылает новые квартиры, пока их не сняли.</p></div>
+    <div class="fact rise" style="--d:2"><p class="f-big">Цены в рублях</p><p>По курсу ЦБ на сегодня, рядом — цена в валюте объявления.</p></div>
+    <div class="fact rise" style="--d:3"><p class="f-big">Без комиссии</p><p>Своих объявлений у нас нет: бот даёт ссылку на оригинал, хозяину вы пишете сами.</p></div>
+  </section>
+
+  <section class="countries" id="strany" aria-labelledby="strany-h">
+    <h2 id="strany-h" class="rise">23 страны, 148 городов</h2>
+    <p class="intro rise" style="--d:1">Цена — медиана двушки в самом доступном городе страны. Подвиньте бюджет: увидите, в скольких городах двушка в него укладывается.</p>
+    <div class="budget rise" style="--d:2" hidden>
       <div class="head"><label for="budget">Бюджет на двушку в месяц</label><output id="budget-out" for="budget">60 000 ₽</output></div>
       <input id="budget" type="range" min="20000" max="200000" step="5000" value="60000">
     </div>
     
     <div class="region">
-      <h3>Средняя Азия</h3>
+      <h3>Западная Европа</h3>
       
-      <a class="c-row" href="/kazakhstan/" data-code="KZ">
-        <span class="n">Казахстан</span>
-        <span class="pr">от 29 307 ₽</span>
-        <span class="sub">10 городов · дешевле всего Уральск <span class="fit"></span></span>
+      <a class="c-row" href="/portugaliya/" data-code="PT">
+        <img class="flag" src="/flags/pt.png" width="32" height="24" alt="" loading="lazy">
+        <span class="n">Португалия</span>
+        <span class="pr">от 71 372 ₽</span>
+        <span class="sub">10 городов · дешевле всего Коимбра <span class="fit"></span></span>
       </a>
       
-      <a class="c-row" href="/kirgiziya/" data-code="KG">
-        <span class="n">Киргизия</span>
-        <span class="pr">от 65 753 ₽</span>
-        <span class="sub">1 город · дешевле всего Бишкек <span class="fit"></span></span>
+      <a class="c-row" href="/ispaniya/" data-code="ES">
+        <img class="flag" src="/flags/es.png" width="32" height="24" alt="" loading="lazy">
+        <span class="n">Испания</span>
+        <span class="pr">от 62 789 ₽</span>
+        <span class="sub">10 городов · дешевле всего Торревьеха <span class="fit"></span></span>
       </a>
       
-      <a class="c-row" href="/uzbekistan/" data-code="UZ">
-        <span class="n">Узбекистан</span>
-        <span class="pr">от 65 753 ₽</span>
-        <span class="sub">1 город · дешевле всего Ташкент <span class="fit"></span></span>
+      <a class="c-row" href="/kipr/" data-code="CY">
+        <img class="flag" src="/flags/cy.png" width="32" height="24" alt="" loading="lazy">
+        <span class="n">Кипр</span>
+        <span class="pr">от 65 499 ₽</span>
+        <span class="sub">4 города · дешевле всего Никосия <span class="fit"></span></span>
       </a>
       
     </div>
@@ -183,18 +151,21 @@
       <h3>Балканы</h3>
       
       <a class="c-row" href="/serbiya/" data-code="RS">
+        <img class="flag" src="/flags/rs.png" width="32" height="24" alt="" loading="lazy">
         <span class="n">Сербия</span>
         <span class="pr">от 27 103 ₽</span>
         <span class="sub">9 городов · дешевле всего Зренянин <span class="fit"></span></span>
       </a>
       
       <a class="c-row" href="/bolgariya/" data-code="BG">
+        <img class="flag" src="/flags/bg.png" width="32" height="24" alt="" loading="lazy">
         <span class="n">Болгария</span>
         <span class="pr">от 29 814 ₽</span>
         <span class="sub">10 городов · дешевле всего Велико-Тырново <span class="fit"></span></span>
       </a>
       
       <a class="c-row" href="/chernogoriya/" data-code="ME">
+        <img class="flag" src="/flags/me.png" width="32" height="24" alt="" loading="lazy">
         <span class="n">Черногория</span>
         <span class="pr">от 54 207 ₽</span>
         <span class="sub">3 города · дешевле всего Бар <span class="fit"></span></span>
@@ -203,44 +174,24 @@
     </div>
     
     <div class="region">
-      <h3>Кавказ</h3>
-      
-      <a class="c-row" href="/gruziya/" data-code="GE">
-        <span class="n">Грузия</span>
-        <span class="pr">от 28 767 ₽</span>
-        <span class="sub">5 городов · дешевле всего Кобулети <span class="fit"></span></span>
-      </a>
-      
-      <a class="c-row" href="/armeniya/" data-code="AM">
-        <span class="n">Армения</span>
-        <span class="pr">от 102 588 ₽</span>
-        <span class="sub">1 город · дешевле всего Ереван <span class="fit"></span></span>
-      </a>
-      
-      <a class="c-row" href="/azerbaydzhan/" data-code="AZ">
-        <span class="n">Азербайджан</span>
-        <span class="pr">от 16 922 ₽</span>
-        <span class="sub">7 городов · дешевле всего Гянджа <span class="fit"></span></span>
-      </a>
-      
-    </div>
-    
-    <div class="region">
       <h3>Восточная Европа</h3>
       
       <a class="c-row" href="/belarus/" data-code="BY">
+        <img class="flag" src="/flags/by.png" width="32" height="24" alt="" loading="lazy">
         <span class="n">Беларусь</span>
         <span class="pr">от 16 455 ₽</span>
         <span class="sub">10 городов · дешевле всего Пинск <span class="fit"></span></span>
       </a>
       
       <a class="c-row" href="/chekhiya/" data-code="CZ">
+        <img class="flag" src="/flags/cz.png" width="32" height="24" alt="" loading="lazy">
         <span class="n">Чехия</span>
-        <span class="pr">от 49 938 ₽</span>
+        <span class="pr">от 50 678 ₽</span>
         <span class="sub">10 городов · дешевле всего Острава <span class="fit"></span></span>
       </a>
       
       <a class="c-row" href="/moldova/" data-code="MD">
+        <img class="flag" src="/flags/md.png" width="32" height="24" alt="" loading="lazy">
         <span class="n">Молдова</span>
         <span class="pr">от 40 655 ₽</span>
         <span class="sub">1 город · дешевле всего Кишинёв <span class="fit"></span></span>
@@ -249,55 +200,10 @@
     </div>
     
     <div class="region">
-      <h3>Западная Европа</h3>
-      
-      <a class="c-row" href="/portugaliya/" data-code="PT">
-        <span class="n">Португалия</span>
-        <span class="pr">от 71 372 ₽</span>
-        <span class="sub">10 городов · дешевле всего Коимбра <span class="fit"></span></span>
-      </a>
-      
-      <a class="c-row" href="/ispaniya/" data-code="ES">
-        <span class="n">Испания</span>
-        <span class="pr">от 62 789 ₽</span>
-        <span class="sub">10 городов · дешевле всего Торревьеха <span class="fit"></span></span>
-      </a>
-      
-      <a class="c-row" href="/kipr/" data-code="CY">
-        <span class="n">Кипр</span>
-        <span class="pr">от 67 758 ₽</span>
-        <span class="sub">4 города · дешевле всего Никосия <span class="fit"></span></span>
-      </a>
-      
-    </div>
-    
-    <div class="region">
-      <h3>Ближний Восток и Африка</h3>
-      
-      <a class="c-row" href="/turtsiya/" data-code="TR">
-        <span class="n">Турция</span>
-        <span class="pr">от 26 895 ₽</span>
-        <span class="sub">10 городов · дешевле всего Бурса <span class="fit"></span></span>
-      </a>
-      
-      <a class="c-row" href="/oae/" data-code="AE">
-        <span class="n">ОАЭ</span>
-        <span class="pr">от 44 066 ₽</span>
-        <span class="sub">7 городов · дешевле всего Фуджейра <span class="fit"></span></span>
-      </a>
-      
-      <a class="c-row" href="/egipet/" data-code="EG">
-        <span class="n">Египет</span>
-        <span class="pr">от 40 658 ₽</span>
-        <span class="sub">5 городов · дешевле всего Хургада <span class="fit"></span></span>
-      </a>
-      
-    </div>
-    
-    <div class="region">
       <h3>Балтия</h3>
       
       <a class="c-row" href="/latviya/" data-code="LV">
+        <img class="flag" src="/flags/lv.png" width="32" height="24" alt="" loading="lazy">
         <span class="n">Латвия</span>
         <span class="pr">от 22 134 ₽</span>
         <span class="sub">10 городов · дешевле всего Резекне <span class="fit"></span></span>
@@ -306,9 +212,88 @@
     </div>
     
     <div class="region">
+      <h3>Ближний Восток и Африка</h3>
+      
+      <a class="c-row" href="/turtsiya/" data-code="TR">
+        <img class="flag" src="/flags/tr.png" width="32" height="24" alt="" loading="lazy">
+        <span class="n">Турция</span>
+        <span class="pr">от 26 895 ₽</span>
+        <span class="sub">10 городов · дешевле всего Бурса <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/oae/" data-code="AE">
+        <img class="flag" src="/flags/ae.png" width="32" height="24" alt="" loading="lazy">
+        <span class="n">ОАЭ</span>
+        <span class="pr">от 44 066 ₽</span>
+        <span class="sub">7 городов · дешевле всего Фуджейра <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/egipet/" data-code="EG">
+        <img class="flag" src="/flags/eg.png" width="32" height="24" alt="" loading="lazy">
+        <span class="n">Египет</span>
+        <span class="pr">от 40 658 ₽</span>
+        <span class="sub">5 городов · дешевле всего Хургада <span class="fit"></span></span>
+      </a>
+      
+    </div>
+    
+    <div class="region">
+      <h3>Кавказ</h3>
+      
+      <a class="c-row" href="/gruziya/" data-code="GE">
+        <img class="flag" src="/flags/ge.png" width="32" height="24" alt="" loading="lazy">
+        <span class="n">Грузия</span>
+        <span class="pr">от 28 767 ₽</span>
+        <span class="sub">5 городов · дешевле всего Кобулети <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/armeniya/" data-code="AM">
+        <img class="flag" src="/flags/am.png" width="32" height="24" alt="" loading="lazy">
+        <span class="n">Армения</span>
+        <span class="pr">от 100 608 ₽</span>
+        <span class="sub">1 город · дешевле всего Ереван <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/azerbaydzhan/" data-code="AZ">
+        <img class="flag" src="/flags/az.png" width="32" height="24" alt="" loading="lazy">
+        <span class="n">Азербайджан</span>
+        <span class="pr">от 16 922 ₽</span>
+        <span class="sub">7 городов · дешевле всего Гянджа <span class="fit"></span></span>
+      </a>
+      
+    </div>
+    
+    <div class="region">
+      <h3>Средняя Азия</h3>
+      
+      <a class="c-row" href="/kazakhstan/" data-code="KZ">
+        <img class="flag" src="/flags/kz.png" width="32" height="24" alt="" loading="lazy">
+        <span class="n">Казахстан</span>
+        <span class="pr">от 29 307 ₽</span>
+        <span class="sub">10 городов · дешевле всего Уральск <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/kirgiziya/" data-code="KG">
+        <img class="flag" src="/flags/kg.png" width="32" height="24" alt="" loading="lazy">
+        <span class="n">Киргизия</span>
+        <span class="pr">от 65 771 ₽</span>
+        <span class="sub">1 город · дешевле всего Бишкек <span class="fit"></span></span>
+      </a>
+      
+      <a class="c-row" href="/uzbekistan/" data-code="UZ">
+        <img class="flag" src="/flags/uz.png" width="32" height="24" alt="" loading="lazy">
+        <span class="n">Узбекистан</span>
+        <span class="pr">от 65 753 ₽</span>
+        <span class="sub">1 город · дешевле всего Ташкент <span class="fit"></span></span>
+      </a>
+      
+    </div>
+    
+    <div class="region">
       <h3>Юго-Восточная Азия</h3>
       
       <a class="c-row" href="/tailand/" data-code="TH">
+        <img class="flag" src="/flags/th.png" width="32" height="24" alt="" loading="lazy">
         <span class="n">Таиланд</span>
         <span class="pr">от 29 049 ₽</span>
         <span class="sub">8 городов · дешевле всего Районг <span class="fit"></span></span>
@@ -320,87 +305,223 @@
       <h3>Латинская Америка</h3>
       
       <a class="c-row" href="/argentina/" data-code="AR">
+        <img class="flag" src="/flags/ar.png" width="32" height="24" alt="" loading="lazy">
         <span class="n">Аргентина</span>
         <span class="pr">от 26 600 ₽</span>
         <span class="sub">6 городов · дешевле всего Росарио <span class="fit"></span></span>
       </a>
       
       <a class="c-row" href="/paragvay/" data-code="PY">
+        <img class="flag" src="/flags/py.png" width="32" height="24" alt="" loading="lazy">
         <span class="n">Парагвай</span>
         <span class="pr">от 28 849 ₽</span>
         <span class="sub">7 городов · дешевле всего Фернандо-де-ла-Мора <span class="fit"></span></span>
       </a>
       
       <a class="c-row" href="/urugvay/" data-code="UY">
+        <img class="flag" src="/flags/uy.png" width="32" height="24" alt="" loading="lazy">
         <span class="n">Уругвай</span>
-        <span class="pr">от 42 369 ₽</span>
+        <span class="pr">от 42 410 ₽</span>
         <span class="sub">3 города · дешевле всего Колония-дель-Сакраменто <span class="fit"></span></span>
       </a>
       
     </div>
     
-    <p class="date">Данные на 21 ноября 2026 · 110254 объявлений</p>
+    <p class="date">Данные на 21 ноября 2026 · 114 110 объявлений</p>
+    <script type="application/json" id="budget-data">{"KZ":[64109,54950,36634,36634,32054,45792,36634,36634,29307,38465],"RS":[67758,45172,31621,31621,31621,36138,27103,27103,28006],"GE":[65753,53424,38032,34863,28767],"AM":[100608],"BY":[50230,24682,27425,27123,24657,21940,17140,20548,21791,16455],"BG":[56917,40610,47883,45082,40655,31621,43275,33427,29814,31621],"PT":[131000,90345,131000,103896,99379,76793,71372,108413,99379,135517],"TR":[58680,48900,53382,34230,32600,43195,52975,57050,48900,26895],"AE":[139876,145471,72691,60616,91378,44066,48498],"ES":[131000,139492,117448,90345,62789,92603,94862,121965,123772,90345],"LV":[40655,43365,37945,22586,31621,28910,22586,27103,22134,31621],"AZ":[33843,21756,21708,19339,16922,16922,16922],"KG":[65771],"EG":[42003,40658,41240,64915],"TH":[60518,48415,47204,36311,45994,84726,72622,29049],"ME":[58724,54207,56465],"AR":[42359,33165,31212,26600,52020,39463],"CZ":[92109,73983,50678,57511,58833,52713,55487,60496,59186,55487],"MD":[40655],"PY":[66493,41753,28849,32794,32794,65753,29506],"UY":[55643,78821,42410],"UZ":[65753],"CY":[144551,65499,76793,90345]}</script>
+  </section>
   </div>
-  <script type="application/json" id="budget-data">{"KZ":[64109,54950,36634,36634,32512,45792,36634,36634,29307,38923],"RS":[67758,45172,31621,31621,31621,36138,27103,27103,28006],"GE":[65753,53424,38032,34863,28767],"AM":[102588],"BY":[50614,24682,27425,27425,24657,21940,17826,20548,20568,16455],"BG":[56917,40655,47883,45082,40655,31621,43275,33427,29814,31621],"PT":[131000,90345,131000,103896,99379,76793,71372,108413,99379,135517],"TR":[58680,48900,53382,33415,32600,43195,52975,57050,47270,26895],"AE":[139876,145471,72691,61545,91378,44066,48498],"ES":[131000,139492,117448,90345,62789,90345,90345,121965,123772,90345],"LV":[40655,42010,37493,22586,31621,28910,22586,27103,22134,31621],"AZ":[33843,21756,21708,19339,16922,16922,16922],"KG":[65753],"EG":[42003,40658,41240,64915],"TH":[60518,45994,45994,36311,45994,84726,72622,29049],"ME":[58724,54207,56465],"AR":[42360,33813,31212,26600,52029,39319],"CZ":[92109,73983,49938,57511,58833,52713,55487,60496,60111,55487],"MD":[40655],"PY":[65178,41753,28849,32794,32794,65753,29506],"UY":[56630,80876,42369],"UZ":[65753],"CY":[135517,67758,79051,90345]}</script>
+</div>
+
+<section class="popular panel" id="tseny" aria-labelledby="tseny-h">
+  <div class="sec-top">
+    <h2 id="tseny-h" class="rise">Сколько стоит двушка</h2>
+    <p class="rise" style="--d:1">Медиана — середина всех цен на двушки в городе: половина дешевле, половина дороже. По объявлениям бота на 21 ноября 2026.</p>
+  </div>
+  <div class="cards">
+    
+    <a class="city-card rise" style="--d:0" href="/gruziya/tbilisi/">
+      <img src="/img/tbilisi.jpg" srcset="/img/tbilisi-480.jpg 480w, /img/tbilisi.jpg 960w" sizes="(max-width: 560px) 92vw, (max-width: 1024px) 46vw, 300px" width="960" height="960" alt="" loading="lazy" decoding="async">
+      <span class="cc-body">
+        <span class="cc-name">Тбилиси</span>
+        <span class="cc-country"><img class="flag" src="/flags/ge.png" width="20" height="15" alt="">Грузия · +95 за сутки</span>
+        <span class="cc-price">65 753 ₽<small>/мес</small></span>
+        <span class="cc-note">обычно 49–95 тыс. ₽</span>
+      </span>
+      <span class="cc-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    
+    <a class="city-card rise" style="--d:1" href="/armeniya/erevan/">
+      <img src="/img/erevan.jpg" srcset="/img/erevan-480.jpg 480w, /img/erevan.jpg 960w" sizes="(max-width: 560px) 92vw, (max-width: 1024px) 46vw, 300px" width="960" height="960" alt="" loading="lazy" decoding="async">
+      <span class="cc-body">
+        <span class="cc-name">Ереван</span>
+        <span class="cc-country"><img class="flag" src="/flags/am.png" width="20" height="15" alt="">Армения · +6 за сутки</span>
+        <span class="cc-price">100 608 ₽<small>/мес</small></span>
+        <span class="cc-note">обычно 80–115 тыс. ₽</span>
+      </span>
+      <span class="cc-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    
+    <a class="city-card rise" style="--d:2" href="/serbiya/belgrad/">
+      <img src="/img/belgrad.jpg" srcset="/img/belgrad-480.jpg 480w, /img/belgrad.jpg 960w" sizes="(max-width: 560px) 92vw, (max-width: 1024px) 46vw, 300px" width="960" height="960" alt="" loading="lazy" decoding="async">
+      <span class="cc-body">
+        <span class="cc-name">Белград</span>
+        <span class="cc-country"><img class="flag" src="/flags/rs.png" width="20" height="15" alt="">Сербия · +81 за сутки</span>
+        <span class="cc-price">67 758 ₽<small>/мес</small></span>
+        <span class="cc-note">обычно 54–99 тыс. ₽</span>
+      </span>
+      <span class="cc-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    
+    <a class="city-card rise" style="--d:3" href="/kipr/limasol/">
+      <img src="/img/limassol.jpg" srcset="/img/limassol-480.jpg 480w, /img/limassol.jpg 960w" sizes="(max-width: 560px) 92vw, (max-width: 1024px) 46vw, 300px" width="960" height="960" alt="" loading="lazy" decoding="async">
+      <span class="cc-body">
+        <span class="cc-name">Лимасол</span>
+        <span class="cc-country"><img class="flag" src="/flags/cy.png" width="20" height="15" alt="">Кипр · +19 за сутки</span>
+        <span class="cc-price">144 551 ₽<small>/мес</small></span>
+        <span class="cc-note">обычно 123–178 тыс. ₽</span>
+      </span>
+      <span class="cc-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+    </a>
+    
+  </div>
 </section>
 
-<section class="pricing" id="podpiska" aria-labelledby="podpiska-h">
-  <div>
-    <h2 id="podpiska-h" class="rise">Сколько стоит бот</h2>
-    <img class="photo rise" style="--d:1" src="/img/tashkent.jpg" width="960" height="960" alt="Ташкент" loading="lazy">
+<section class="how panel" id="kak" aria-labelledby="kak-h">
+  <div class="sec-top">
+    <h2 id="kak-h" class="rise">Как работает бот</h2>
+    <p class="rise" style="--d:1">Вы один раз говорите, что ищете. Дальше бот сам следит за сайтами объявлений и пишет, когда появилось подходящее.</p>
   </div>
-  <div class="price-cols">
-    <div class="price-group rise">
-      <h3>Сначала бесплатно</h3>
-      <div class="item"><div class="line"><span>Пробный период, 3 дня</span><span>0 звёзд</span></div><p class="d">Всё работает: поиски, уведомления о новых квартирах, гайды по переезду.</p></div>
-      <div class="item"><div class="line"><span>Поиск и гайды без подписки</span><span>0 звёзд</span></div><p class="d">Поиски сохраняются, новые квартиры можно смотреть в боте самому.</p></div>
-      <div class="item"><div class="line"><span>Друг оформил подписку</span><span>+7 дней</span></div><p class="d">Ссылка-приглашение — в боте, в разделе подписки.</p></div>
+  <ol class="steps">
+    <li class="step rise"><span class="s-dot" aria-hidden="true"></span><h3>Выберите город</h3><p>Страна, город и число комнат — около минуты.</p></li>
+    <li class="step rise" style="--d:1"><span class="s-dot" aria-hidden="true"></span><h3>Поставьте бюджет</h3><p>В рублях. Бот сам пересчитает лари, лиры и евро.</p></li>
+    <li class="step rise" style="--d:2"><span class="s-dot" aria-hidden="true"></span><h3>Бот ищет</h3><p>Каждые полчаса обходит 35 сайтов и помечает подозрительно дешёвые.</p></li>
+    <li class="step rise" style="--d:3"><span class="s-dot" aria-hidden="true"></span><h3>Квартира в Telegram</h3><p>Карточка с ценой и ссылкой на оригинал. Комиссии нет.</p></li>
+  </ol>
+  
+  <div class="example rise">
+    <p>Так выглядит каждая находка — настоящее объявление из бота:</p>
+    <div class="card" data-ui>
+  <div class="who">Переезд.Дом</div>
+  <div class="t"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>3-комн. · 71,8 м² · Дидубе, Тбилиси</div>
+  <div class="p">≈ 82 191 ₽/мес <span>(1 000 $)</span></div>
+  <div class="s"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>найдено 21 ноября</div>
+  <a class="open" href="https://korter.ge/ru/%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D0%B0-%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80-%D1%82%D0%B1%D0%B8%D0%BB%D0%B8%D1%81%D0%B8/1021162" rel="nofollow noopener" target="_blank">Открыть на korter.ge</a>
+</div>
+
+  </div>
+  
+</section>
+
+<section class="pricing panel" id="podpiska" aria-labelledby="podpiska-h">
+  <div class="pr-head">
+    <div>
+      <h2 id="podpiska-h" class="rise"><span class="t-mute">Сколько стоит</span> бот</h2>
+      <p class="rise" style="--d:1">Первые 3 дня — бесплатно: поиски, уведомления и гайды работают полностью. Дальше — подписка за звёзды Telegram. Друг оформил подписку по вашей ссылке — вам +7 дней.</p>
     </div>
-    <div class="price-group rise" style="--d:1">
-      <h3>Подписка</h3>
-      
-      <div class="item"><div class="line"><span>7 дней</span><span>75 звёзд</span></div><p class="d">Разовая оплата — на время поиска. ≈ 120 ₽.</p></div>
-      
-      <div class="item"><div class="line"><span>14 дней</span><span>140 звёзд</span></div><p class="d">Разовая оплата — на время поиска. ≈ 220 ₽.</p></div>
-      
-      <div class="item"><div class="line"><span>1 месяц</span><span>250 звёзд</span></div><p class="d">Продлевается сама, отменить можно в любой момент. ≈ 400 ₽.</p></div>
-      
-      <div class="item"><div class="line"><span>12 месяцев</span><span>1800 звёзд</span></div><p class="d">Скидка 40%, разовая оплата. ≈ 2 880 ₽.</p></div>
-      
-    </div>
+    <a class="btn btn--outline rise" style="--d:2" href="https://t.me/PereezdDomBot?start=src_site_main">Начать бесплатно</a>
+  </div>
+  <div class="plans">
+    
+    <article class="plan rise" style="--d:0" aria-labelledby="plan-7d">
+      <div class="plan-top">
+        <svg class="plan-ic" aria-hidden="true"><use href="#i-plane"/></svg>
+        <h3 id="plan-7d">7 дней</h3>
+        <p class="plan-note">Если квартира нужна срочно: неделя на поиск.</p>
+        <p class="plan-price"><span class="pp-n">75</span> <span class="pp-u">звёзд</span></p>
+        <p class="plan-rub">≈ 120 ₽ · <span class="nw">≈ 17 ₽ в день</span></p>
+        <a class="btn plan-cta btn--outline" href="https://t.me/PereezdDomBot?start=src_site_plan_7d">Оформить в боте</a>
+      </div>
+      <ul class="plan-feats">
+        <li><svg aria-hidden="true"><use href="#i-globe"/></svg><span>23 страны и 148 городов</span></li><li><svg aria-hidden="true"><use href="#i-bell-ring"/></svg><span>Новые квартиры каждые 30 минут</span></li><li><svg aria-hidden="true"><use href="#i-russian-ruble"/></svg><span>Цены в рублях по курсу ЦБ</span></li><li><svg aria-hidden="true"><use href="#i-shield-alert"/></svg><span>Пометка подозрительно дешёвых</span></li><li><svg aria-hidden="true"><use href="#i-book-open"/></svg><span>Гайды по переезду для каждой страны</span></li>
+      </ul>
+      <p class="plan-pay"><svg aria-hidden="true"><use href="#i-wallet"/></svg><span>Разовая оплата — на время поиска</span></p>
+    </article>
+    
+    <article class="plan rise" style="--d:1" aria-labelledby="plan-14d">
+      <div class="plan-top">
+        <svg class="plan-ic" aria-hidden="true"><use href="#i-luggage"/></svg>
+        <h3 id="plan-14d">14 дней</h3>
+        <p class="plan-note">Две недели, чтобы спокойно сравнить районы.</p>
+        <p class="plan-price"><span class="pp-n">140</span> <span class="pp-u">звёзд</span></p>
+        <p class="plan-rub">≈ 220 ₽ · <span class="nw">≈ 16 ₽ в день</span></p>
+        <a class="btn plan-cta btn--outline" href="https://t.me/PereezdDomBot?start=src_site_plan_14d">Оформить в боте</a>
+      </div>
+      <ul class="plan-feats">
+        <li><svg aria-hidden="true"><use href="#i-globe"/></svg><span>23 страны и 148 городов</span></li><li><svg aria-hidden="true"><use href="#i-bell-ring"/></svg><span>Новые квартиры каждые 30 минут</span></li><li><svg aria-hidden="true"><use href="#i-russian-ruble"/></svg><span>Цены в рублях по курсу ЦБ</span></li><li><svg aria-hidden="true"><use href="#i-shield-alert"/></svg><span>Пометка подозрительно дешёвых</span></li><li><svg aria-hidden="true"><use href="#i-book-open"/></svg><span>Гайды по переезду для каждой страны</span></li>
+      </ul>
+      <p class="plan-pay"><svg aria-hidden="true"><use href="#i-wallet"/></svg><span>Разовая оплата — на время поиска</span></p>
+    </article>
+    
+    <article class="plan rise" style="--d:2" aria-labelledby="plan-1m">
+      <div class="plan-top">
+        <svg class="plan-ic" aria-hidden="true"><use href="#i-refresh-cw"/></svg>
+        <h3 id="plan-1m">1 месяц</h3>
+        <p class="plan-note">Для поиска без спешки, месяц за месяцем.</p>
+        <p class="plan-price"><span class="pp-n">250</span> <span class="pp-u">звёзд</span></p>
+        <p class="plan-rub">≈ 400 ₽ · <span class="nw">≈ 13 ₽ в день</span></p>
+        <a class="btn plan-cta btn--outline" href="https://t.me/PereezdDomBot?start=src_site_plan_1m">Оформить в боте</a>
+      </div>
+      <ul class="plan-feats">
+        <li><svg aria-hidden="true"><use href="#i-globe"/></svg><span>23 страны и 148 городов</span></li><li><svg aria-hidden="true"><use href="#i-bell-ring"/></svg><span>Новые квартиры каждые 30 минут</span></li><li><svg aria-hidden="true"><use href="#i-russian-ruble"/></svg><span>Цены в рублях по курсу ЦБ</span></li><li><svg aria-hidden="true"><use href="#i-shield-alert"/></svg><span>Пометка подозрительно дешёвых</span></li><li><svg aria-hidden="true"><use href="#i-book-open"/></svg><span>Гайды по переезду для каждой страны</span></li>
+      </ul>
+      <p class="plan-pay"><svg aria-hidden="true"><use href="#i-refresh-cw"/></svg><span>Продлевается сама, отменить можно в любой момент</span></p>
+    </article>
+    
+    <article class="plan rise plan--best" style="--d:3" aria-labelledby="plan-12m">
+      <div class="plan-top">
+        <svg class="plan-ic" aria-hidden="true"><use href="#i-house"/></svg>
+        <h3 id="plan-12m">12 месяцев</h3>
+        <p class="plan-note">Если переезжаете надолго и ищете не одну квартиру.</p>
+        <p class="plan-price"><span class="pp-n">1800</span> <span class="pp-u">звёзд</span></p>
+        <p class="plan-rub">≈ 2 880 ₽ · <span class="nw">≈ 8 ₽ в день</span> — <b>выгоднее всего</b></p>
+        <a class="btn plan-cta" href="https://t.me/PereezdDomBot?start=src_site_plan_12m">Оформить в боте</a>
+      </div>
+      <ul class="plan-feats">
+        <li><svg aria-hidden="true"><use href="#i-globe"/></svg><span>23 страны и 148 городов</span></li><li><svg aria-hidden="true"><use href="#i-bell-ring"/></svg><span>Новые квартиры каждые 30 минут</span></li><li><svg aria-hidden="true"><use href="#i-russian-ruble"/></svg><span>Цены в рублях по курсу ЦБ</span></li><li><svg aria-hidden="true"><use href="#i-shield-alert"/></svg><span>Пометка подозрительно дешёвых</span></li><li><svg aria-hidden="true"><use href="#i-book-open"/></svg><span>Гайды по переезду для каждой страны</span></li>
+      </ul>
+      <p class="plan-pay"><svg aria-hidden="true"><use href="#i-wallet"/></svg><span>Разовая оплата, скидка 40%</span></p>
+    </article>
+    
   </div>
 </section>
 
-<section class="faq" id="voprosy" aria-labelledby="voprosy-h">
+<section class="faq panel" id="voprosy" aria-labelledby="voprosy-h">
   <h2 id="voprosy-h" class="rise">Частые вопросы</h2>
-  <div class="drawer">
-    <details open name="faq" data-tab="Откуда" style="--i:0">
+  <div class="qa">
+    <details open name="faq">
       <summary>Откуда бот берёт объявления?</summary>
       <div class="a"><p>Сам обходит 35 сайтов недвижимости — крупнейшие в каждой стране: krisha.kz, 4zida.rs, ss.com, korter.ge и другие. Своих объявлений у нас нет.</p></div>
     </details>
-    <details name="faq" data-tab="Курс" style="--i:1">
+    <details name="faq">
       <summary>По какому курсу считаются рубли?</summary>
       <div class="a"><p>По курсу ЦБ России на сегодня, он обновляется каждый день. Рядом с рублями бот показывает цену в валюте объявления.</p></div>
     </details>
-    <details name="faq" data-tab="Мошенники" style="--i:2">
+    <details name="faq">
       <summary>Что значит пометка «подозрительно»?</summary>
       <div class="a"><p>Цена меньше половины медианы похожих квартир в городе. Так часто выглядят объявления мошенников: не переводите предоплату, пока не увидите квартиру и договор.</p></div>
     </details>
-    <details name="faq" data-tab="Комиссия" style="--i:3">
+    <details name="faq">
       <summary>Это агентство? Нужно платить комиссию?</summary>
       <div class="a"><p>Нет. Бот только находит объявления и даёт ссылку на оригинал. Договариваетесь вы напрямую с хозяином или агентом с сайта объявления.</p></div>
     </details>
-    <details name="faq" data-tab="Переезд" style="--i:4">
+    <details name="faq">
       <summary>Есть ли что-то про визы и ВНЖ?</summary>
       <div class="a"><p>Да: у каждой страны есть гайд — въезд, виды на жительство, документы, банки, связь и стоимость жизни, со ссылками на источники. Он есть на страницах стран на этом сайте и в боте.</p></div>
     </details>
   </div>
 </section>
 
-<section class="start" id="nachat" aria-labelledby="nachat-h">
-  <div>
+<section class="start panel" id="nachat" aria-labelledby="nachat-h">
+  <div class="st-text">
     <h2 id="nachat-h" class="rise">Начните с одного города</h2>
-    <p class="after rise" style="--d:1">Откроется бот в Telegram. Выберите город и бюджет — новые квартиры начнут приходить сразу, первые 3 дня бесплатно.</p>
+    <p class="rise" style="--d:1">Откроется бот в Telegram. Выберите город и бюджет — новые квартиры начнут приходить сразу, первые 3 дня бесплатно.</p>
+    <dl class="stats rise" style="--d:2">
+      <div><dt>стран</dt><dd>23</dd></div>
+      <div><dt>городов</dt><dd>148</dd></div>
+      <div><dt>сайтов</dt><dd>35</dd></div>
+      <div><dt>объявлений</dt><dd>114 110</dd></div>
+    </dl>
   </div>
   <div class="chat rise" style="--d:2" data-ui>
     <div class="head"><span class="ava"><img src="/favicon.png" width="36" height="36" alt=""></span><span><span class="name">Переезд.Дом</span><br><span class="status">бот</span></span></div>
@@ -411,21 +532,28 @@
   </div>
 </section>
 </main>
+<script type="application/json" id="globe-data">[{"code":"KZ","name":"Казахстан","url":"/kazakhstan/","flag":"/flags/kz.png","from":"29 307 ₽","lat":43.24,"lon":76.89},{"code":"RS","name":"Сербия","url":"/serbiya/","flag":"/flags/rs.png","from":"27 103 ₽","lat":44.79,"lon":20.45},{"code":"GE","name":"Грузия","url":"/gruziya/","flag":"/flags/ge.png","from":"28 767 ₽","lat":41.72,"lon":44.79},{"code":"AM","name":"Армения","url":"/armeniya/","flag":"/flags/am.png","from":"100 608 ₽","lat":40.18,"lon":44.51},{"code":"BY","name":"Беларусь","url":"/belarus/","flag":"/flags/by.png","from":"16 455 ₽","lat":53.9,"lon":27.56},{"code":"BG","name":"Болгария","url":"/bolgariya/","flag":"/flags/bg.png","from":"29 814 ₽","lat":42.7,"lon":23.32},{"code":"PT","name":"Португалия","url":"/portugaliya/","flag":"/flags/pt.png","from":"71 372 ₽","lat":38.72,"lon":-9.14},{"code":"TR","name":"Турция","url":"/turtsiya/","flag":"/flags/tr.png","from":"26 895 ₽","lat":41.01,"lon":28.98},{"code":"AE","name":"ОАЭ","url":"/oae/","flag":"/flags/ae.png","from":"44 066 ₽","lat":25.2,"lon":55.27},{"code":"ES","name":"Испания","url":"/ispaniya/","flag":"/flags/es.png","from":"62 789 ₽","lat":40.42,"lon":-3.7},{"code":"LV","name":"Латвия","url":"/latviya/","flag":"/flags/lv.png","from":"22 134 ₽","lat":56.95,"lon":24.11},{"code":"AZ","name":"Азербайджан","url":"/azerbaydzhan/","flag":"/flags/az.png","from":"16 922 ₽","lat":40.41,"lon":49.87},{"code":"KG","name":"Киргизия","url":"/kirgiziya/","flag":"/flags/kg.png","from":"65 771 ₽","lat":42.87,"lon":74.59},{"code":"EG","name":"Египет","url":"/egipet/","flag":"/flags/eg.png","from":"40 658 ₽","lat":30.04,"lon":31.24},{"code":"TH","name":"Таиланд","url":"/tailand/","flag":"/flags/th.png","from":"29 049 ₽","lat":13.75,"lon":100.5},{"code":"ME","name":"Черногория","url":"/chernogoriya/","flag":"/flags/me.png","from":"54 207 ₽","lat":42.44,"lon":19.26},{"code":"AR","name":"Аргентина","url":"/argentina/","flag":"/flags/ar.png","from":"26 600 ₽","lat":-34.6,"lon":-58.38},{"code":"CZ","name":"Чехия","url":"/chekhiya/","flag":"/flags/cz.png","from":"50 678 ₽","lat":50.08,"lon":14.44},{"code":"MD","name":"Молдова","url":"/moldova/","flag":"/flags/md.png","from":"40 655 ₽","lat":47.01,"lon":28.86},{"code":"PY","name":"Парагвай","url":"/paragvay/","flag":"/flags/py.png","from":"28 849 ₽","lat":-25.26,"lon":-57.58},{"code":"UY","name":"Уругвай","url":"/urugvay/","flag":"/flags/uy.png","from":"42 410 ₽","lat":-34.9,"lon":-56.16},{"code":"UZ","name":"Узбекистан","url":"/uzbekistan/","flag":"/flags/uz.png","from":"65 753 ₽","lat":41.3,"lon":69.24},{"code":"CY","name":"Кипр","url":"/kipr/","flag":"/flags/cy.png","from":"65 499 ₽","lat":34.68,"lon":33.04}]</script>
 
-<footer class="foot">
-  <div class="notes">
-    <p><a href="/">Переезд.Дом</a> — бот в Telegram: аренда и покупка жилья за границей с ценами в рублях.</p>
-    <p>Цены на сайте — на 21 ноября 2026, обновляются каждый день. В боте — каждые полчаса.</p>
-    <p><a href="https://t.me/PereezdDom">Канал @PereezdDom</a> · <a href="#top">Наверх</a></p>
+<footer class="foot panel">
+  <div class="f-top">
+    <div class="f-about">
+      <a class="brand" href="/"><img src="/favicon.png" width="36" height="36" alt="">Переезд.Дом</a>
+      <p>Бот в Telegram: аренда и покупка жилья за границей с ценами в рублях. Цены на сайте — на 21 ноября 2026, обновляются каждый день, в боте — каждые полчаса.</p>
+      <p><a href="https://t.me/PereezdDom">Канал @PereezdDom</a> · <a href="#top">Наверх</a></p>
+    </div>
+    <div class="f-countries">
+      <p class="f-h">Страны</p>
+      <p><a href="/kazakhstan/">Казахстан</a> · <a href="/serbiya/">Сербия</a> · <a href="/gruziya/">Грузия</a> · <a href="/armeniya/">Армения</a> · <a href="/belarus/">Беларусь</a> · <a href="/bolgariya/">Болгария</a> · <a href="/portugaliya/">Португалия</a> · <a href="/turtsiya/">Турция</a> · <a href="/oae/">ОАЭ</a> · <a href="/ispaniya/">Испания</a> · <a href="/latviya/">Латвия</a> · <a href="/azerbaydzhan/">Азербайджан</a> · <a href="/kirgiziya/">Киргизия</a> · <a href="/egipet/">Египет</a> · <a href="/tailand/">Таиланд</a> · <a href="/chernogoriya/">Черногория</a> · <a href="/argentina/">Аргентина</a> · <a href="/chekhiya/">Чехия</a> · <a href="/moldova/">Молдова</a> · <a href="/paragvay/">Парагвай</a> · <a href="/urugvay/">Уругвай</a> · <a href="/uzbekistan/">Узбекистан</a> · <a href="/kipr/">Кипр</a></p>
+    </div>
   </div>
-  <a class="bot" href="https://t.me/PereezdDomBot?start=src_site_main">@PereezdDomBot</a>
-  <div class="meta">
-    <p><a href="/kazakhstan/">Казахстан</a> · <a href="/serbiya/">Сербия</a> · <a href="/gruziya/">Грузия</a> · <a href="/armeniya/">Армения</a> · <a href="/belarus/">Беларусь</a> · <a href="/bolgariya/">Болгария</a> · <a href="/portugaliya/">Португалия</a> · <a href="/turtsiya/">Турция</a> · <a href="/oae/">ОАЭ</a> · <a href="/ispaniya/">Испания</a> · <a href="/latviya/">Латвия</a> · <a href="/azerbaydzhan/">Азербайджан</a> · <a href="/kirgiziya/">Киргизия</a> · <a href="/egipet/">Египет</a> · <a href="/tailand/">Таиланд</a> · <a href="/chernogoriya/">Черногория</a> · <a href="/argentina/">Аргентина</a> · <a href="/chekhiya/">Чехия</a> · <a href="/moldova/">Молдова</a> · <a href="/paragvay/">Парагвай</a> · <a href="/urugvay/">Уругвай</a> · <a href="/uzbekistan/">Узбекистан</a> · <a href="/kipr/">Кипр</a></p>
-    <p>Фото: <a href="https://commons.wikimedia.org/w/index.php?curid=3238803" rel="noopener">«Balcony in Old Town»</a>, Vladimer Shioshvili, <a href="https://creativecommons.org/licenses/by-sa/2.0/" rel="noopener">CC BY-SA 2.0</a> (кадрировано); <a href="https://www.flickr.com/photos/77742560@N06/29163976733" rel="noopener">«Gliding over the roofs of Old Town (Dzveli Tbilisi)»</a>, shankar s., <a href="https://creativecommons.org/licenses/by/2.0/" rel="noopener">CC BY 2.0</a> (кадрировано); <a href="https://commons.wikimedia.org/w/index.php?curid=77270342" rel="noopener">«Kosancicev venac, pogled iz Karadjordjeve ulice»</a>, Milica Buha, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a> (кадрировано); <a href="https://commons.wikimedia.org/w/index.php?curid=114915269" rel="noopener">«Lemesos-seafront-promenade-a»</a>, Mboesch, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a> (кадрировано); <a href="https://commons.wikimedia.org/w/index.php?curid=83568171" rel="noopener">«Tashkent City Park 2019»</a>, Mysportedit, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a> (кадрировано); <a href="https://commons.wikimedia.org/w/index.php?curid=13266506" rel="noopener">«Yerevan Armenia with the backdrop of Mount Ararat»</a>, Սէրուժ Ուրիշեան (Serouj Ourishian), <a href="https://creativecommons.org/licenses/by/3.0/" rel="noopener">CC BY 3.0</a> (кадрировано).</p>
-    <p class="right">Цены — медианы объявлений, а не оценка рынка. 2026</p>
+  <a class="f-bot" href="https://t.me/PereezdDomBot?start=src_site_main">@PereezdDomBot</a>
+  <div class="f-meta">
+    <p>Фото: <a href="https://commons.wikimedia.org/w/index.php?curid=127243049" rel="noopener">«White Cumulus Clouds against Blue Sky (2)»</a>, Lance Vanlewen, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a> (кадрировано); <a href="https://commons.wikimedia.org/w/index.php?curid=3238803" rel="noopener">«Balcony in Old Town»</a>, Vladimer Shioshvili, <a href="https://creativecommons.org/licenses/by-sa/2.0/" rel="noopener">CC BY-SA 2.0</a> (кадрировано); <a href="https://commons.wikimedia.org/w/index.php?curid=77270342" rel="noopener">«Kosancicev venac, pogled iz Karadjordjeve ulice»</a>, Milica Buha, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a> (кадрировано); <a href="https://commons.wikimedia.org/w/index.php?curid=114915269" rel="noopener">«Lemesos-seafront-promenade-a»</a>, Mboesch, <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="noopener">CC BY-SA 4.0</a> (кадрировано); <a href="https://commons.wikimedia.org/w/index.php?curid=13266506" rel="noopener">«Yerevan Armenia with the backdrop of Mount Ararat»</a>, Սէրուժ Ուրիշեան (Serouj Ourishian), <a href="https://creativecommons.org/licenses/by/3.0/" rel="noopener">CC BY 3.0</a> (кадрировано). Карта суши — Natural Earth. Флаги — flag-icons (MIT). Иконки — Lucide (ISC). 3D — three.js (MIT).</p>
+    <p>Цены — медианы объявлений, а не оценка рынка. 2026</p>
   </div>
 </footer>
 
 <script src="/site.js?v=2026-11-21" defer></script>
+<script type="module" src="/globe.js?v=2026-11-21"></script>
 </body>
 </html>
