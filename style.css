@@ -136,18 +136,25 @@ main > .panel:first-child { margin-top: 0; }
 .globe.grab canvas { cursor: grabbing; }
 .gflags { position: absolute; inset: 0; pointer-events: none; }
 .gflag { position: absolute; left: 0; top: 0; pointer-events: auto; text-decoration: none; will-change: transform; }
-/* древко и сдвиг флажка — только transform (scaleY и translate по своим переменным): раскладку не трогаем */
+/* древко и сдвиг флажка — только transform (scaleY и translate по своим переменным): раскладку не трогаем.
+   --st — древко со знаком (минус — флажок под точкой), --fy — сдвиг нижнего края флажка от точки */
 .gflag .gf-stem { position: absolute; left: -1px; bottom: 0; width: 2px; height: 1px; background: #17305e; transform-origin: 50% 100%; transform: scaleY(var(--st, 14)); }
 .gflag .gf-dot { position: absolute; left: -4px; bottom: -4px; width: 8px; height: 8px; border-radius: 50%; background: var(--white); box-shadow: 0 0 0 2px #17305e; }
+/* древко и точка не ловят нажатия — иначе древко соседа перекрывает флажок */
+.gflag .gf-stem, .gflag .gf-dot { pointer-events: none; }
 .gflag img {
   position: absolute; left: 1px; bottom: 0; width: 30px; height: 22px; max-width: none; object-fit: cover;
   border: 2px solid var(--white); border-radius: 4px; box-shadow: 0 5px 12px -6px rgba(8, 30, 80, 0.6);
-  transform-origin: 0 100%; transform: translate(calc(var(--fx, 0) * 1px), calc(var(--st, 14) * -1px));
+  transform-origin: 0 100%; transform: translate(calc(var(--fx, 0) * 1px), calc(var(--fy, -14) * 1px));
   scale: var(--fs, 1); transition: scale 180ms ease;
 }
+/* невидимая рамка нажатия вокруг флажка (её размер учитывает globe.js: pad 3, на телефоне 5) */
+.gflag .gf-hit { position: absolute; left: -2px; bottom: -3px; width: 36px; height: 28px; transform: translate(calc(var(--fx, 0) * 1px), calc(var(--fy, -14) * 1px)); }
 .gflag.left img { transform-origin: 100% 100%; }
+.gflag.down img { transform-origin: 0 0; }
+.gflag.down.left img { transform-origin: 100% 0; }
 .gflag .gf-name {
-  display: none; position: absolute; left: 38px; bottom: 0; white-space: nowrap; transform: translateY(calc((var(--st, 14) + 1) * -1px));
+  display: none; position: absolute; left: 38px; bottom: 0; white-space: nowrap; transform: translateY(calc(var(--fy, -14) * 1px - 1px));
   background: var(--white); color: var(--ink); font-size: 14px; font-weight: 700; padding: 4px 10px; border-radius: 999px;
 }
 .gflag.left .gf-name { left: auto; right: 38px; }
@@ -462,5 +469,6 @@ section { scroll-margin-top: 16px; }
   .plan { scroll-snap-align: start; }
   .step::after { display: none; }
   .gflag img { width: 24px; height: 18px; }
+  .gflag .gf-hit { left: -4px; bottom: -5px; width: 34px; height: 28px; }
   .gflag:hover .gf-name, .gflag.on .gf-name { display: none; }
 }

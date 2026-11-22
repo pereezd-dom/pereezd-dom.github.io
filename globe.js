@@ -87,7 +87,9 @@ async function start() {
   const resize = () => {
     width = stage.clientWidth;
     height = stage.clientHeight;
-    flags.forEach((f) => { f.w = f.el.querySelector('img').offsetWidth || 30; });
+    const img = flags[0] && flags[0].el.querySelector('img'); // размер флажка задаёт CSS (на телефоне меньше)
+    flagW = (img && img.offsetWidth) || 30;
+    flagH = (img && img.offsetHeight) || 22;
     renderer.setSize(width, height, false);
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
@@ -443,20 +445,23 @@ function buildFlags(countries) {
     el.href = c.url;
     el.tabIndex = -1;
     el.setAttribute('aria-hidden', 'true');
-    el.innerHTML = `<span class="gf-stem"></span><span class="gf-dot"></span><img src="${c.flag}" width="30" height="22" alt=""><span class="gf-name">${c.name}${c.from ? ` · от ${c.from}` : ''}</span>`;
+    el.innerHTML = `<span class="gf-stem"></span><span class="gf-dot"></span><span class="gf-hit"></span><img src="${c.flag}" width="30" height="22" alt=""><span class="gf-name">${c.name}${c.from ? ` · от ${c.from}` : ''}</span>`;
     el.addEventListener('pointerenter', () => document.dispatchEvent(new CustomEvent('globe:focus', { detail: c.code })));
     el.addEventListener('pointerleave', () => document.dispatchEvent(new CustomEvent('globe:focus', { detail: null })));
     layer.appendChild(el);
-    return { c, el, base: toVec(c.lat, c.lon, 1.04), stem: 14, side: 1, x: 0, y: 0, fx: 0, w: 30, lastSide: 1, lastZ: '', lastAlpha: '' };
+    return { c, el, base: toVec(c.lat, c.lon, 1.04), stem: 14, st: 14, fy: -14, side: 1, dir: 1, x: 0, y: 0, fx: 0, lastSide: 1, lastDir: 1, lastZ: '', lastAlpha: '' };
   });
 }
 
-// Каждый кадр: где на экране основание флажка, виден ли он, какой высоты древко и с какой стороны флажок.
-// Сторона меняется, только если с другой стороны древко ниже хотя бы на две ступени, — флажки не прыгают.
-const STEM_MIN = 14, STEM_STEP = 11, STEM_MAX = 80;
+// Каждый кадр: где на экране основание флажка, виден ли он, какой длины древко и куда стоит флажок —
+// вверх или вниз от точки (когда сверху тесно, как в Европе на телефоне), вправо или влево.
+// Место меняется, только если там древко короче хотя бы на две ступени, — флажки не прыгают.
+// Вокруг флажка — невидимая рамка нажатия (PAD); рамки соседей не перекрываются, поэтому нажимается каждый.
+const STEM_MIN = 14, STEM_STEP = 11, STEM_MAX = 124;
+const PLACES = [[1, 1], [-1, 1], [1, -1], [-1, -1]]; // [сторона, направление]: сначала вверх, потом вниз
+let flagW = 30, flagH = 22;
 function placeFlags(flags, v, spin, camera, width, height, dt) {
-  const small = width < 520;
-  const fw = small ? 24 : 30, fh = small ? 18 : 22;
+  const fw = flagW, fh = flagH, pad = fw < 30 ? 5 : 3;
   const shown = [];
   for (const f of flags) {
     v.copy(f.base).applyMatrix4(spin.matrixWorld);
@@ -469,25 +474,38 @@ function placeFlags(flags, v, spin, camera, width, height, dt) {
   }
   shown.sort((a, b) => b.y - a.y);
   const boxes = [];
-  const free = (x1, y1) => !boxes.some((b) => x1 < b.x2 && x1 + fw + 6 > b.x1 && y1 < b.y2 && y1 + fh + 6 > b.y1);
-  const lowest = (f, side) => {
+  // рамка нажатия флажка с древком stem на стороне side и в направлении dir (1 — вверх, −1 — вниз)
+  const box = (f, side, dir, stem) => {
+    const x1 = side > 0 ? f.x + 1 : f.x - fw - 1;
+    const y1 = dir > 0 ? f.y - stem - fh : f.y + stem;
+    return { x1: x1 - pad, x2: x1 + fw + pad, y1: y1 - pad, y2: y1 + fh + pad };
+  };
+  // не выше и не ниже квадрата глобуса — иначе флажок ляжет на кнопки над ним (на телефоне)
+  const inside = (a) => a.y1 >= 0 && a.y2 <= height;
+  const free = (a) => inside(a) && !boxes.some((b) => a.x1 < b.x2 && a.x2 > b.x1 && a.y1 < b.y2 && a.y2 > b.y1);
+  const lowest = (f, side, dir) => {
     for (let stem = STEM_MIN; stem <= STEM_MAX; stem += STEM_STEP) {
-      if (free((side > 0 ? f.x : f.x - fw) - 3, f.y - stem - fh - 3)) return stem;
+      if (free(box(f, side, dir, stem))) return stem;
     }
     return STEM_MAX + STEM_STEP;
   };
   const ease = 1 - Math.exp(-dt * 9);
   for (const f of shown) {
-    let stem = lowest(f, f.side);
-    const other = lowest(f, -f.side);
-    if (other + 2 * STEM_STEP <= stem) {
-      f.side = -f.side;
-      stem = other;
+    let stem = lowest(f, f.side, f.dir);
+    for (const [side, dir] of PLACES) {
+      if (side === f.side && dir === f.dir) continue;
+      const other = lowest(f, side, dir);
+      if (other + 2 * STEM_STEP <= stem) {
+        f.side = side;
+        f.dir = dir;
+        stem = other;
+      }
     }
-    stem = Math.min(STEM_MAX, stem);
-    f.stem += (stem - f.stem) * ease;
-    const x1 = f.side > 0 ? f.x : f.x - fw;
-    boxes.push({ x1: x1 - 3, x2: x1 + fw + 3, y1: f.y - stem - fh - 3, y2: f.y - stem + 3 });
+    // свободного места нет — самое длинное древко, которое ещё в квадрате глобуса
+    const room = f.dir > 0 ? f.y - fh - pad : height - f.y - fh - pad;
+    stem = Math.max(0, Math.min(STEM_MAX, stem, room));
+    f.stem = stem;
+    boxes.push(box(f, f.side, f.dir, stem));
   }
   // в DOM пишем только то, что сдвигает слои (transform, свои переменные для transform), и только когда изменилось:
   // ничего из этого не меняет раскладку страницы
@@ -501,12 +519,20 @@ function placeFlags(flags, v, spin, camera, width, height, dt) {
     }
     if (f.alpha <= 0) continue;
     s.transform = `translate3d(${f.x.toFixed(1)}px, ${f.y.toFixed(1)}px, 0)`;
-    f.fx += ((f.side > 0 ? 0 : -(f.w + 2)) - f.fx) * ease;
-    s.setProperty('--st', f.stem.toFixed(1));
+    // --st — древко со знаком (минус — вниз от точки), --fy — сдвиг нижнего края флажка от точки
+    f.fx += ((f.side > 0 ? 0 : -(fw + 2)) - f.fx) * ease;
+    f.st += (f.dir * f.stem - f.st) * ease;
+    f.fy += ((f.dir > 0 ? -f.stem : f.stem + fh) - f.fy) * ease;
+    s.setProperty('--st', f.st.toFixed(1));
+    s.setProperty('--fy', f.fy.toFixed(1));
     s.setProperty('--fx', f.fx.toFixed(1));
     if (f.side !== f.lastSide) {
       f.el.classList.toggle('left', f.side < 0);
       f.lastSide = f.side;
+    }
+    if (f.dir !== f.lastDir) {
+      f.el.classList.toggle('down', f.dir < 0);
+      f.lastDir = f.dir;
     }
     const z = String(1000 - Math.round(f.y));
     if (z !== f.lastZ) {
